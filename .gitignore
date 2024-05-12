@@ -1,4 +1,5 @@
-dir_to_ignore/Mockups
-dir_to_ignore/Style-Guide
+Mockups/
+Style-Guide/
 *.css.map
 *DS_Store
+*.md

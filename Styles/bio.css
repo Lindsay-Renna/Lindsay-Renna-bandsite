@@ -45,7 +45,68 @@ p {
   line-height: 150%;
 }
 
-/* FOOTER */
+header {
+  background-color: #323232;
+}
+header .header-logo {
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 2rem 0rem 1rem 0rem;
+}
+header .header-nav__list {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-nav__list li {
+  flex: 1;
+  text-align: center;
+  width: 50%;
+}
+header .header-nav__list li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+header .header-nav__list .active-page {
+  border-bottom: 4px solid #ffffff;
+}
+header .header-nav__list a.inactive-page {
+  font-weight: 400;
+  color: #e1e1e1;
+}
+
+.hero {
+  background-image: url(../../Assets/Images/hero-bio.jpg);
+  background-size: cover;
+  height: 19.5rem;
+}
+.hero__overlay {
+  background-color: rgba(50, 50, 50, 0.5);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  z-index: 1;
+}
+.hero__overlay h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
 footer {
   background-color: #323232;
   color: #ffffff;
@@ -84,4 +145,6 @@ footer .bandsite-text {
 footer .copyright {
   margin-bottom: 0;
   padding-bottom: 2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
 }/*# sourceMappingURL=bio.css.map */

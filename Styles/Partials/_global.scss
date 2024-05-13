@@ -11,24 +11,48 @@ body {
 h1 {
 	font-size: 1.5rem;
 	line-height: 2rem;
-	font-weight: 700;
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 3.75rem;
+		line-height: 4.25rem;
+		font-weight: 600;
+	}
 }
 
 h2 {
 	font-size: 1.5rem;
 	line-height: 2rem;
 	font-weight: 600;
+
+	@include tablet {
+		font-size: 2.25rem;
+		line-height: 2.75rem;
+		font-weight: 700;
+	}
 }
 
 h3 {
 	font-size: 0.875rem;
 	font-weight: 600;
+
+	@include tablet {
+		font-size: 1.5rem;
+		line: height 2rem;
+		font-weight: 600;
+	}
 }
 
 p {
 	font-size: 0.8125rem;
 	font-weight: 400;
 	line-height: 1.125rem;
+
+	@include tablet {
+		font-size: 0.875rem;
+		line-height: 1.375rem;
+		font-weight: 400;
+	}
 }
 
 // HEADER //
@@ -37,6 +61,12 @@ header {
 	background-color: $Bandsite-black;
 	width: 100%;
 
+	@include tablet {
+		display: flex;
+		align-items: flex-end;
+		gap: 4rem;
+	}
+
 	.header-logo {
 		margin: 0;
 		color: $primarywhite;
@@ -44,6 +74,10 @@ header {
 		font-size: 1.5rem;
 		font-weight: 400;
 		padding: 0.8rem 0rem 0.18rem 0rem;
+
+		@include tablet {
+			padding: 0.8rem 0 1rem 2rem;
+		}
 
 		a {
 			text-decoration: none;
@@ -63,6 +97,11 @@ header {
 				flex: 1;
 				text-align: center;
 				width: 50%;
+
+				@include tablet {
+					margin-right: 3.5rem;
+					padding-bottom: 1rem;
+				}
 			}
 
 			li a {
@@ -82,6 +121,7 @@ header {
 			a.inactive-page {
 				font-weight: 400;
 				color: $secondarygrey;
+				border-bottom: 3px solid transparent;
 			}
 		}
 	}
@@ -102,7 +142,7 @@ header {
 		height: 100%;
 		z-index: 1;
 
-		h2 {
+		h1 {
 			color: $primarywhite;
 			padding: 0.25rem 0 0 1rem;
 		}
@@ -140,7 +180,7 @@ header {
 		}
 
 		.bio-text__1 {
-			padding-right: 0.795rem;
+			padding-right: 0.86rem;
 		}
 
 		.bio-text__2 {

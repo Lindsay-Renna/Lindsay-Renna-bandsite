@@ -57,6 +57,10 @@ header .header-logo {
   font-weight: 400;
   padding: 0.8rem 0rem 0.18rem 0rem;
 }
+header .header-logo a {
+  text-decoration: none;
+  color: #ffffff;
+}
 header .header-nav__list {
   list-style-type: none;
   width: 100%;
@@ -109,28 +113,46 @@ header .header-nav__list a.inactive-page {
 .bio {
   padding: 0 0.95rem 0 0.9rem;
   color: #323232;
+  background-color: #ffffff;
 }
 .bio h2 {
   margin: 0.8em 0 0.4em 0;
 }
-.bio img {
+.bio .bio-quote img {
   width: 100%;
   height: auto;
 }
-.bio .quote {
+.bio .bio-quote .quote {
   font-weight: 600;
   font-size: 0.85rem;
   word-spacing: 0.1rem;
 }
-.bio .bio-header {
+.bio .bio-text .bio-text__header {
   margin-top: 1.5rem;
   font-weight: 600;
 }
-.bio .bio-text1 {
+.bio .bio-text .bio-text__1 {
   padding-right: 0.795rem;
 }
-.bio .bio-text2 {
+.bio .bio-text .bio-text__2 {
   padding-right: 0.7rem;
+}
+
+.photo-gallery {
+  background-color: #fafafa;
+  padding: 0.1rem 0.95rem 1rem 0.9rem;
+}
+.photo-gallery h2 {
+  margin-bottom: 0.7rem;
+}
+.photo-gallery .gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+}
+.photo-gallery .gallery__img {
+  width: 100%;
 }
 
 footer {

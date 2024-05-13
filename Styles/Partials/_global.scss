@@ -44,6 +44,11 @@ header {
 		font-size: 1.5rem;
 		font-weight: 400;
 		padding: 0.8rem 0rem 0.18rem 0rem;
+
+		a {
+			text-decoration: none;
+			color: $primarywhite;
+		}
 	}
 
 	.header-nav {
@@ -109,37 +114,62 @@ header {
 .bio {
 	padding: 0 0.95rem 0 0.9rem;
 	color: $Bandsite-black;
+	background-color: $primarywhite;
 
 	h2 {
 		margin: 0.8em 0 0.4em 0;
 	}
 
-	img {
-		width: 100%;
-		height: auto;
+	.bio-quote {
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		.quote {
+			font-weight: 600;
+			font-size: 0.85rem;
+			word-spacing: 0.1rem;
+		}
 	}
 
-	.quote {
-		font-weight: 600;
-		font-size: 0.85rem;
-		word-spacing: 0.1rem;
-	}
+	.bio-text {
+		.bio-text__header {
+			margin-top: 1.5rem;
+			font-weight: 600;
+		}
 
-	.bio-header {
-		margin-top: 1.5rem;
-		font-weight: 600;
-	}
+		.bio-text__1 {
+			padding-right: 0.795rem;
+		}
 
-	.bio-text1 {
-		padding-right: 0.795rem;
-	}
-
-	.bio-text2 {
-		padding-right: 0.7rem;
+		.bio-text__2 {
+			padding-right: 0.7rem;
+		}
 	}
 }
 
 // PHOTO GALLERY //
+
+.photo-gallery {
+	background-color: $secondarywhite;
+	padding: 0.1rem 0.95rem 1rem 0.9rem;
+
+	h2 {
+		margin-bottom: 0.7rem;
+	}
+
+	.gallery {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-direction: column;
+
+		&__img {
+			width: 100%;
+		}
+	}
+}
 
 // FOOTER //
 

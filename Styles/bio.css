@@ -94,7 +94,7 @@ header .header-logo {
 }
 @media (min-width: 768px) {
   header .header-logo {
-    padding: 0.8rem 0 1rem 2rem;
+    padding: 0.8rem 0 0.75rem 2rem;
   }
 }
 header .header-logo a {
@@ -133,10 +133,12 @@ header .header-nav__list li a {
 header .header-nav__list .active-page {
   border-bottom: 3px solid #ffffff;
 }
-header .header-nav__list a.inactive-page {
+header .header-nav__list .inactive-page {
+  border-bottom: 3px solid transparent;
+}
+header .header-nav__list .inactive-page a {
   font-weight: 400;
   color: #e1e1e1;
-  border-bottom: 3px solid transparent;
 }
 
 .hero {
@@ -144,6 +146,11 @@ header .header-nav__list a.inactive-page {
   background-size: cover;
   background-position: center;
   height: 11.65rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 28.1rem;
+  }
 }
 .hero__overlay {
   background-color: rgba(50, 50, 50, 0.5);
@@ -155,6 +162,11 @@ header .header-nav__list a.inactive-page {
 .hero__overlay h1 {
   color: #ffffff;
   padding: 0.25rem 0 0 1rem;
+}
+@media (min-width: 768px) {
+  .hero__overlay h1 {
+    padding: 0.25rem 0 0 2.5rem;
+  }
 }
 
 .bio {

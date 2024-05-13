@@ -76,7 +76,7 @@ header {
 		padding: 0.8rem 0rem 0.18rem 0rem;
 
 		@include tablet {
-			padding: 0.8rem 0 1rem 2rem;
+			padding: 0.8rem 0 0.75rem 2rem;
 		}
 
 		a {
@@ -118,10 +118,13 @@ header {
 				border-bottom: 3px solid $primarywhite;
 			}
 
-			a.inactive-page {
-				font-weight: 400;
-				color: $secondarygrey;
+			.inactive-page {
 				border-bottom: 3px solid transparent;
+
+				a {
+					font-weight: 400;
+					color: $secondarygrey;
+				}
 			}
 		}
 	}
@@ -135,6 +138,10 @@ header {
 	background-position: center;
 	height: 11.65rem;
 
+	@include tablet {
+		height: 28.1rem;
+	}
+
 	&__overlay {
 		background-color: $Bandsite-black-50;
 		display: flex;
@@ -145,6 +152,10 @@ header {
 		h1 {
 			color: $primarywhite;
 			padding: 0.25rem 0 0 1rem;
+
+			@include tablet {
+				padding: 0.25rem 0 0 2.5rem;
+			}
 		}
 	}
 }

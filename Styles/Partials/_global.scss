@@ -168,34 +168,97 @@ header {
 	background-color: $primarywhite;
 
 	h2 {
-		margin: 0.8em 0 0.4em 0;
+		margin: 0.8rem 0 0.4rem 0;
+
+		@include tablet {
+			margin: 3.1rem 0 1.5rem 1.3rem;
+			font-weight: 600;
+		}
 	}
 
 	.bio-quote {
-		img {
+		@include tablet {
+			display: flex;
+			justify-content: center;
 			width: 100%;
-			height: auto;
 		}
 
-		.quote {
-			font-weight: 600;
-			font-size: 0.85rem;
-			word-spacing: 0.1rem;
+		&__wrapper {
+			@include tablet {
+				display: flex;
+				flex-direction: column;
+				width: 78%;
+			}
+
+			.quote-image {
+				@include tablet {
+					height: 19.25rem;
+				}
+
+				img {
+					width: 100%;
+					height: 19.25rem;
+
+					object-fit: cover;
+				}
+			}
+
+			.quote {
+				font-weight: 600;
+				font-size: 0.85rem;
+				word-spacing: 0.1rem;
+
+				@include tablet {
+					font-size: 1.3rem;
+					word-spacing: 0.1rem;
+					line-height: 1.95rem;
+					margin: 1.95rem 0 0.5rem 0;
+					padding-right: 1.85rem;
+				}
+			}
+
+			.quote--small {
+				@include tablet {
+					font-size: 1rem;
+					margin: 0;
+				}
+			}
 		}
 	}
 
 	.bio-text {
-		.bio-text__header {
+		&__header {
 			margin-top: 1.5rem;
 			font-weight: 600;
+
+			@include tablet {
+				margin: 3rem 0 1rem 5rem;
+			}
+		}
+
+		&__wrapper {
+			@include tablet {
+				display: flex;
+				gap: 1.4rem;
+				margin: 1rem 0;
+				padding: 0 5rem 0 5rem;
+			}
 		}
 
 		.bio-text__1 {
 			padding-right: 0.86rem;
+
+			@include tablet {
+				padding-right: 0;
+			}
 		}
 
 		.bio-text__2 {
 			padding-right: 0.7rem;
+
+			@include tablet {
+				padding: 0;
+			}
 		}
 	}
 }

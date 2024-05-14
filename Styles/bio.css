@@ -269,14 +269,32 @@ header .header-nav__list .inactive-page a {
 .photo-gallery h2 {
   margin-bottom: 0.7rem;
 }
+@media (min-width: 768px) {
+  .photo-gallery h2 {
+    font-weight: 600;
+    margin: 3.1rem 0 1.25rem 0;
+  }
+}
 .photo-gallery .gallery {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .photo-gallery .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 1.25rem;
+  }
+}
 .photo-gallery .gallery__img {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .photo-gallery .gallery__img {
+    width: 31%;
+  }
 }
 
 footer {

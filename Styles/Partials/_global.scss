@@ -271,6 +271,11 @@ header {
 
 	h2 {
 		margin-bottom: 0.7rem;
+
+		@include tablet {
+			font-weight: 600;
+			margin: 3.1rem 0 1.25rem 0;
+		}
 	}
 
 	.gallery {
@@ -279,8 +284,18 @@ header {
 		gap: 1rem;
 		flex-direction: column;
 
+		@include tablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0 1.25rem;
+		}
+
 		&__img {
 			width: 100%;
+
+			@include tablet {
+				width: 31%;
+			}
 		}
 	}
 }

@@ -305,36 +305,91 @@ header {
 footer {
 	background-color: $Bandsite-black;
 	color: $primarywhite;
-	padding-left: 1.5rem;
+	padding-left: 1rem;
+
+	@include tablet {
+		padding: 0 2.25rem;
+		position: relative;
+	}
 
 	h2 {
 		margin: 0 0 0.8rem 0;
 		padding-top: 1.65rem;
+
+		@include tablet {
+			font-weight: 600;
+			display: inline-block;
+			margin: 1.4rem 1.75rem 0 0;
+		}
 	}
 
 	.social-images {
-		display: flex;
-		gap: 2rem;
-		align-items: center;
+		display: inline-block;
 
 		img {
 			width: auto;
-			height: 1.5rem;
+			height: 1.4rem;
+			padding: 0 2rem 0 0;
 		}
 	}
 
-	.contact-info {
-		margin-top: 1.25rem;
-		line-height: 150%;
+	.contact {
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+		}
 
-		h3 {
-			margin-bottom: 0.9rem;
+		.contact-info {
+			margin-top: 1.25rem;
+			line-height: 150%;
+
+			@include tablet {
+				margin-top: 1.15rem;
+			}
+
+			h3 {
+				margin-bottom: 0.9rem;
+
+				@include tablet {
+					font-size: 0.875rem;
+					font-weight: 400;
+					margin-bottom: 0.5rem;
+				}
+			}
+
+			&__address {
+				@include tablet {
+					margin-top: 1.25rem;
+				}
+			}
+
+			&__email {
+				@include tablet {
+					margin-top: 1.25rem;
+				}
+			}
 		}
 	}
 
-	.bandsite-text {
-		font-weight: 400;
-		margin-bottom: 0;
+	.bandsite-link {
+		text-decoration: none;
+		color: $primarywhite;
+
+		@include tablet {
+			position: absolute;
+			bottom: 17.5rem;
+			right: 0.625rem;
+		}
+
+		h2 {
+			font-weight: 400;
+			margin-bottom: 0;
+
+			@include tablet {
+				font-size: 1.5rem;
+				font-weight: 400;
+			}
+		}
 	}
 
 	.copyright {
@@ -342,5 +397,11 @@ footer {
 		padding-bottom: 1.5rem;
 		font-size: 0.7rem;
 		font-weight: 400;
+
+		@include tablet {
+			margin-top: 2rem;
+			padding-bottom: 3rem;
+			font-size: 0.875rem;
+		}
 	}
 }

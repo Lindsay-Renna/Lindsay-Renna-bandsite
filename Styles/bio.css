@@ -412,6 +412,11 @@ footer {
     position: relative;
   }
 }
+@media (min-width: 1280px) {
+  footer {
+    padding: 0 8rem;
+  }
+}
 footer h2 {
   margin: 0 0 0.8rem 0;
   padding-top: 1.65rem;
@@ -421,6 +426,11 @@ footer h2 {
     font-weight: 600;
     display: inline-block;
     margin: 1.4rem 1.75rem 0 0;
+  }
+}
+@media (min-width: 1280px) {
+  footer h2 {
+    margin: 1.4rem 3rem 0 0;
   }
 }
 footer .social-images {
@@ -435,6 +445,12 @@ footer .social-images img {
   footer .contact {
     display: flex;
     justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  footer .contact {
+    justify-content: flex-start;
+    gap: 4.75rem;
   }
 }
 footer .contact .contact-info {
@@ -475,6 +491,12 @@ footer .bandsite-link {
     position: absolute;
     bottom: 17.5rem;
     right: 0.625rem;
+  }
+}
+@media (min-width: 1280px) {
+  footer .bandsite-link {
+    bottom: 17.5rem;
+    right: 5rem;
   }
 }
 footer .bandsite-link h2 {

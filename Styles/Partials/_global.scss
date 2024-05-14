@@ -160,6 +160,10 @@ header {
 		height: 28.1rem;
 	}
 
+	@include desktop {
+		height: 39.5rem;
+	}
+
 	&__overlay {
 		background-color: $Bandsite-black-50;
 		display: flex;
@@ -173,6 +177,11 @@ header {
 
 			@include tablet {
 				padding: 0.25rem 0 0 2.5rem;
+			}
+
+			@include desktop {
+				padding: 0.25rem 0 0 8.15rem;
+				word-spacing: 0.25rem;
 			}
 		}
 	}
@@ -192,6 +201,10 @@ header {
 			margin: 3.1rem 0 1.5rem 1.3rem;
 			font-weight: 600;
 		}
+
+		@include desktop {
+			padding-left: 6rem;
+		}
 	}
 
 	.bio-quote {
@@ -206,6 +219,10 @@ header {
 				display: flex;
 				flex-direction: column;
 				width: 78%;
+			}
+
+			@include desktop {
+				width: 67.5%;
 			}
 
 			.quote-image {
@@ -232,6 +249,11 @@ header {
 					line-height: 1.95rem;
 					margin: 1.95rem 0 0.5rem 0;
 					padding-right: 1.85rem;
+				}
+
+				@include desktop {
+					width: 79%;
+					font-size: 1.35rem;
 				}
 			}
 

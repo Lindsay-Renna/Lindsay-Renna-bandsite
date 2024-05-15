@@ -31,7 +31,6 @@ h1 {
   h1 {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 600;
   }
 }
 
@@ -55,8 +54,7 @@ h3 {
 @media (min-width: 768px) {
   h3 {
     font-size: 1.5rem;
-    line: height 2rem;
-    font-weight: 600;
+    line-height: 2rem;
   }
 }
 
@@ -69,8 +67,94 @@ p {
   p {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
   }
+}
+
+header {
+  background-color: #323232;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: flex-end;
+    gap: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  header {
+    gap: 3.9rem;
+  }
+}
+header .header-logo {
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.8rem 0rem 0.18rem 0rem;
+}
+@media (min-width: 768px) {
+  header .header-logo {
+    padding: 0.8rem 0 0.75rem 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  header .header-logo {
+    padding: 1.5rem 0 1rem 8rem;
+    font-size: 1.475rem;
+  }
+}
+header .header-logo a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header .header-nav__list {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-nav__list li {
+  text-align: center;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  header .header-nav__list li {
+    margin-right: 3.5rem;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  header .header-nav__list li {
+    margin-right: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+header .header-nav__list li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.8125rem;
+  padding-bottom: 0.6rem;
+}
+@media (min-width: 768px) {
+  header .header-nav__list li a {
+    font-size: 0.875rem;
+  }
+}
+header .header-nav__list .active-page {
+  border-bottom: 3px solid #ffffff;
+}
+header .header-nav__list .inactive-page {
+  border-bottom: 3px solid transparent;
+}
+header .header-nav__list .inactive-page a {
+  color: #e1e1e1;
 }
 
 footer {
@@ -129,11 +213,6 @@ footer .contact .contact-info {
   margin-top: 1.25rem;
   line-height: 150%;
 }
-@media (min-width: 768px) {
-  footer .contact .contact-info {
-    margin-top: 1.15rem;
-  }
-}
 footer .contact .contact-info h3 {
   margin-bottom: 0.9rem;
 }
@@ -178,7 +257,6 @@ footer .bandsite-link h2 {
 @media (min-width: 768px) {
   footer .bandsite-link h2 {
     font-size: 1.5rem;
-    font-weight: 400;
   }
 }
 footer .copyright {
@@ -195,110 +273,20 @@ footer .copyright {
   }
 }
 
-header {
-  background-color: #323232;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  header {
-    display: flex;
-    align-items: flex-end;
-    gap: 4rem;
-  }
-}
-@media (min-width: 1280px) {
-  header {
-    gap: 3.9rem;
-  }
-}
-header .header-logo {
-  margin: 0;
-  color: #ffffff;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 400;
-  padding: 0.8rem 0rem 0.18rem 0rem;
-}
-@media (min-width: 768px) {
-  header .header-logo {
-    padding: 0.8rem 0 0.75rem 2rem;
-  }
-}
-@media (min-width: 1280px) {
-  header .header-logo {
-    padding: 1.5rem 0 1rem 8rem;
-    font-size: 1.475rem;
-  }
-}
-header .header-logo a {
-  text-decoration: none;
-  color: #ffffff;
-}
-header .header-nav__list {
-  list-style-type: none;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header .header-nav__list li {
-  flex: 1;
-  text-align: center;
-  width: 50%;
-}
-@media (min-width: 768px) {
-  header .header-nav__list li {
-    margin-right: 3.5rem;
-    padding-bottom: 1rem;
-  }
-}
-@media (min-width: 1280px) {
-  header .header-nav__list li {
-    margin-right: 2rem;
-    padding-bottom: 1rem;
-  }
-}
-header .header-nav__list li a {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  padding-bottom: 0.6rem;
-}
-@media (min-width: 768px) {
-  header .header-nav__list li a {
-    font-size: 0.875rem;
-  }
-}
-header .header-nav__list .active-page {
-  border-bottom: 3px solid #ffffff;
-}
-header .header-nav__list .inactive-page {
-  border-bottom: 3px solid transparent;
-}
-header .header-nav__list .inactive-page a {
-  font-weight: 400;
-  color: #e1e1e1;
-}
-
 .hero {
   background-image: url(../../Assets/Images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
-  height: 11.65rem;
+  height: 45.5vh;
 }
 @media (min-width: 768px) {
   .hero {
-    height: 28.1rem;
+    height: 54.75vh;
   }
 }
 @media (min-width: 1280px) {
   .hero {
-    height: 39.5rem;
+    height: 76.5vh;
   }
 }
 .hero__overlay {
@@ -378,7 +366,7 @@ header .header-nav__list .inactive-page a {
 }
 @media (min-width: 768px) {
   .bio .bio-quote__wrapper .quote-image img {
-    height: 19rem;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -423,12 +411,11 @@ header .header-nav__list .inactive-page a {
 }
 @media (min-width: 1280px) {
   .bio .bio-text {
-    margin: 0 5rem 2rem 12.75rem;
+    margin: 3rem 5rem 2rem 12.75rem;
   }
 }
 .bio .bio-text__header {
   margin-top: 1.5rem;
-  font-weight: 600;
 }
 @media (min-width: 768px) {
   .bio .bio-text__wrapper {
@@ -514,9 +501,7 @@ header .header-nav__list .inactive-page a {
 }
 .photo-gallery .gallery__img img {
   width: 100%;
-  height: auto;
   transition: transform 0.3s ease-in-out;
-  transform-origin: center center;
 }
 .photo-gallery .gallery__img img:hover {
   transform: scale(1.5);

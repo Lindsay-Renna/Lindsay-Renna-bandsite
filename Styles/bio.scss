@@ -3,113 +3,20 @@
 @use "./Partials/variables" as *;
 @use "./Partials/fonts" as *;
 
-// HEADER //
-
-header {
-	background-color: $Bandsite-black;
-	width: 100%;
-
-	@include tablet {
-		display: flex;
-		align-items: flex-end;
-		gap: 4rem;
-	}
-
-	@include desktop {
-		gap: 3.9rem;
-	}
-
-	.header-logo {
-		margin: 0;
-		color: $primarywhite;
-		text-align: center;
-		font-size: 1.5rem;
-		font-weight: 400;
-		padding: 0.8rem 0rem 0.18rem 0rem;
-
-		@include tablet {
-			padding: 0.8rem 0 0.75rem 2rem;
-		}
-
-		@include desktop {
-			padding: 1.5rem 0 1rem 8rem;
-			font-size: 1.475rem;
-		}
-
-		a {
-			text-decoration: none;
-			color: $primarywhite;
-		}
-	}
-
-	.header-nav {
-		&__list {
-			list-style-type: none;
-			width: 100%;
-			padding: 0;
-			margin: 0;
-			@include flex-center;
-
-			li {
-				flex: 1;
-				text-align: center;
-				width: 50%;
-
-				@include tablet {
-					margin-right: 3.5rem;
-					padding-bottom: 1rem;
-				}
-
-				@include desktop {
-					margin-right: 2rem;
-					padding-bottom: 1rem;
-				}
-			}
-
-			li a {
-				display: block;
-				width: 100%;
-				text-decoration: none;
-				color: $primarywhite;
-				font-size: 0.8125rem;
-				font-weight: 600;
-				padding-bottom: 0.6rem;
-
-				@include tablet {
-					font-size: 0.875rem;
-				}
-			}
-
-			.active-page {
-				border-bottom: 3px solid $primarywhite;
-			}
-
-			.inactive-page {
-				border-bottom: 3px solid transparent;
-
-				a {
-					font-weight: 400;
-					color: $secondarygrey;
-				}
-			}
-		}
-	}
-}
-
 // HERO //
 
 .hero {
 	background-image: url(../../Assets/Images/hero-bio.jpg);
 	background-size: cover;
 	background-position: center;
-	height: 11.65rem;
+	height: 45.5vh;
 
 	@include tablet {
-		height: 28.1rem;
+		height: 54.75vh;
 	}
 
 	@include desktop {
-		height: 39.5rem;
+		height: 76.5vh;
 	}
 
 	&__overlay {
@@ -187,7 +94,7 @@ header {
 					width: 100%;
 
 					@include tablet {
-						height: 19rem;
+						height: 100%;
 						object-fit: cover;
 					}
 
@@ -232,12 +139,11 @@ header {
 		}
 
 		@include desktop {
-			margin: 0 5rem 2rem 12.75rem;
+			margin: 3rem 5rem 2rem 12.75rem;
 		}
 
 		&__header {
 			margin-top: 1.5rem;
-			font-weight: 600;
 		}
 
 		&__wrapper {
@@ -322,9 +228,7 @@ header {
 
 			img {
 				width: 100%;
-				height: auto;
 				transition: transform 0.3s ease-in-out;
-				transform-origin: center center;
 
 				&:hover {
 					transform: scale(1.5);

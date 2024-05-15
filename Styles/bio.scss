@@ -297,7 +297,7 @@ header {
 		}
 
 		@include desktop {
-			margin: 3.1rem 0 1.25rem 7.25rem;
+			margin: 3.1rem 0 2rem 7.25rem;
 		}
 	}
 
@@ -314,11 +314,22 @@ header {
 		}
 
 		@include desktop {
-			margin: 0 7.25rem;
+			margin: 0 7.25rem 0.9rem 7.25rem;
 		}
 
 		&__img {
-			width: 100%;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: auto;
+				transition: transform 0.3s ease-in-out;
+				transform-origin: center center;
+
+				&:hover {
+					transform: scale(1.5);
+				}
+			}
 
 			@include tablet {
 				width: 31%;

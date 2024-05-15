@@ -488,7 +488,7 @@ header .header-nav__list .inactive-page a {
 }
 @media (min-width: 1280px) {
   .photo-gallery h2 {
-    margin: 3.1rem 0 1.25rem 7.25rem;
+    margin: 3.1rem 0 2rem 7.25rem;
   }
 }
 .photo-gallery .gallery {
@@ -506,11 +506,20 @@ header .header-nav__list .inactive-page a {
 }
 @media (min-width: 1280px) {
   .photo-gallery .gallery {
-    margin: 0 7.25rem;
+    margin: 0 7.25rem 0.9rem 7.25rem;
   }
 }
 .photo-gallery .gallery__img {
+  overflow: hidden;
+}
+.photo-gallery .gallery__img img {
   width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center;
+}
+.photo-gallery .gallery__img img:hover {
+  transform: scale(1.5);
 }
 @media (min-width: 768px) {
   .photo-gallery .gallery__img {

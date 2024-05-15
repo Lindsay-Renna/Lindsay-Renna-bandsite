@@ -277,7 +277,7 @@ footer .copyright {
   background-image: url(../../Assets/Images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
-  height: 45.5vh;
+  height: 22.5vh;
 }
 @media (min-width: 768px) {
   .hero {
@@ -353,29 +353,26 @@ footer .copyright {
 }
 @media (min-width: 768px) {
   .bio .bio-quote__wrapper .quote-image {
-    height: 19rem;
+    height: 37.5vh;
   }
 }
 @media (min-width: 1280px) {
   .bio .bio-quote__wrapper .quote-image {
-    height: 28.25rem;
+    height: 54.75vh;
   }
 }
 .bio .bio-quote__wrapper .quote-image img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 768px) {
   .bio .bio-quote__wrapper .quote-image img {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-}
-@media (min-width: 1280px) {
-  .bio .bio-quote__wrapper .quote-image img {
-    height: 28.25rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
 }
 .bio .bio-quote__wrapper .quote {

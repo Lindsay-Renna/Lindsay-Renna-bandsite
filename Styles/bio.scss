@@ -9,7 +9,7 @@
 	background-image: url(../../Assets/Images/hero-bio.jpg);
 	background-size: cover;
 	background-position: center;
-	height: 45.5vh;
+	height: 22.5vh;
 
 	@include tablet {
 		height: 54.75vh;
@@ -83,24 +83,21 @@
 
 			.quote-image {
 				@include tablet {
-					height: 19rem;
+					height: 37.5vh;
 				}
 
 				@include desktop {
-					height: 28.25rem;
+					height: 54.75vh;
 				}
 
 				img {
 					width: 100%;
+					object-fit: cover;
 
 					@include tablet {
 						height: 100%;
 						object-fit: cover;
-					}
-
-					@include desktop {
-						height: 28.25rem;
-						object-fit: cover;
+						object-position: center;
 					}
 				}
 			}

@@ -73,21 +73,16 @@ header {
 		gap: 3.9rem;
 	}
 
-	.header-logo {
-		margin: 0;
-		color: $primarywhite;
+	.band-logo {
 		text-align: center;
-		font-size: 1.5rem;
-		font-weight: 400;
-		padding: 0.8rem 0rem 0.18rem 0rem;
+		padding: 1rem 0rem 0.4rem 0rem;
 
 		@include tablet {
-			padding: 0.8rem 0 0.75rem 2rem;
+			padding: 1.5rem 0 1.25rem 2rem;
 		}
 
 		@include desktop {
-			padding: 1.5rem 0 1rem 8rem;
-			font-size: 1.475rem;
+			padding: 2rem 0 1.5rem 8rem;
 		}
 	}
 
@@ -105,12 +100,12 @@ header {
 
 				@include tablet {
 					margin-right: 3.5rem;
-					padding-bottom: 1rem;
+					padding: 1.5rem 0 0.8rem 0;
 				}
 
 				@include desktop {
 					margin-right: 2rem;
-					padding-bottom: 1rem;
+					padding-bottom: 1.25rem;
 				}
 			}
 
@@ -221,24 +216,17 @@ footer {
 	}
 
 	.bandsite-link {
+		margin-top: 2.1rem;
+
 		@include tablet {
 			position: absolute;
-			bottom: 18rem;
-			right: 0.625rem;
+			bottom: 19rem;
+			right: 2.25rem;
 		}
 
 		@include desktop {
-			bottom: 17.5rem;
-			right: 5rem;
-		}
-
-		h2 {
-			font-weight: 400;
-			margin-bottom: 0;
-
-			@include tablet {
-				font-size: 1.5rem;
-			}
+			bottom: 18.65rem;
+			right: 8rem;
 		}
 	}
 

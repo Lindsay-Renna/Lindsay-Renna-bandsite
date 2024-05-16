@@ -70,6 +70,11 @@ p {
   }
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 header {
   background-color: #323232;
   width: 100%;
@@ -105,10 +110,6 @@ header .header-logo {
     font-size: 1.475rem;
   }
 }
-header .header-logo a {
-  text-decoration: none;
-  color: #ffffff;
-}
 header .header-nav__list {
   list-style-type: none;
   width: 100%;
@@ -137,8 +138,6 @@ header .header-nav__list li {
 header .header-nav__list li a {
   display: block;
   width: 100%;
-  text-decoration: none;
-  color: #ffffff;
   font-size: 0.8125rem;
   padding-bottom: 0.6rem;
 }
@@ -232,10 +231,6 @@ footer .contact .contact-info h3 {
   footer .contact .contact-info__email {
     margin-top: 1.25rem;
   }
-}
-footer .bandsite-link {
-  text-decoration: none;
-  color: #ffffff;
 }
 @media (min-width: 768px) {
   footer .bandsite-link {

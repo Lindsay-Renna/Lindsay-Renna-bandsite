@@ -1,1 +1,244 @@
+@use "./Partials/global" as *;
+@use "./Partials/mixins" as *;
+@use "./Partials/variables" as *;
+@use "./Partials/fonts" as *;
 
+// HERO //
+
+.hero {
+	background-image: url(../../Assets/Images/hero-bio.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 22.5vh;
+
+	@include tablet {
+		height: 54.75vh;
+	}
+
+	@include desktop {
+		height: 76.5vh;
+	}
+
+	&__overlay {
+		background-color: $Bandsite-black-50;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		z-index: 1;
+
+		h1 {
+			color: $primarywhite;
+			padding: 0.25rem 0 0 1rem;
+
+			@include tablet {
+				padding: 0.25rem 0 0 2.5rem;
+			}
+
+			@include desktop {
+				padding: 0.25rem 0 0 8.15rem;
+				word-spacing: 0.25rem;
+			}
+		}
+	}
+}
+
+// BIOGRAPHY ARTICLE //
+
+.bio {
+	padding: 0 0.95rem 0 0.9rem;
+	color: $Bandsite-black;
+	background-color: $primarywhite;
+
+	h2 {
+		margin: 0.8rem 0 0.4rem 0;
+
+		@include tablet {
+			margin: 3.1rem 0 1.5rem 1.3rem;
+			font-weight: 600;
+		}
+
+		@include desktop {
+			padding-left: 6rem;
+			margin-bottom: 2.15rem;
+		}
+	}
+
+	.bio-quote {
+		@include tablet {
+			@include flex-center-horizontal;
+			width: 100%;
+		}
+
+		&__wrapper {
+			@include tablet {
+				display: flex;
+				flex-direction: column;
+				width: 78%;
+			}
+
+			@include desktop {
+				width: 67.5%;
+			}
+
+			.quote-image {
+				@include tablet {
+					height: 37.5vh;
+				}
+
+				@include desktop {
+					height: 54.75vh;
+				}
+
+				img {
+					width: 100%;
+					object-fit: cover;
+
+					@include tablet {
+						height: 100%;
+						object-fit: cover;
+						object-position: center;
+					}
+				}
+			}
+
+			.quote {
+				font-weight: 600;
+				font-size: 0.85rem;
+				word-spacing: 0.1rem;
+				line-height: 1.5rem;
+				margin-bottom: 0.5rem;
+
+				@include tablet {
+					font-size: 1.3rem;
+					word-spacing: 0.1rem;
+					line-height: 1.95rem;
+					margin: 1.95rem 0 0.5rem 0;
+					padding-right: 1.85rem;
+				}
+
+				@include desktop {
+					width: 79%;
+					font-size: 1.35rem;
+				}
+			}
+
+			.quote--small {
+				margin: 0;
+
+				@include tablet {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	.bio-text {
+		@include tablet {
+			@include flex-center-horizontal;
+		}
+
+		&__wrapper {
+			width: 95%;
+			@include flex-center-horizontal;
+			flex-wrap: wrap;
+
+			@include tablet {
+				width: 78%;
+				gap: 1.75rem;
+				margin-bottom: 2rem;
+			}
+
+			@include desktop {
+				width: 68%;
+				gap: 1.55rem;
+			}
+
+			h3 {
+				width: 100%;
+				margin: 1.5rem 0 1rem 0;
+
+				@include tablet {
+					margin: 3rem 0 0 0;
+				}
+			}
+
+			.bio-text__1 {
+				@include tablet {
+					width: 47%;
+				}
+
+				@include desktop {
+					width: 48%;
+				}
+			}
+
+			.bio-text__2 {
+				@include tablet {
+					width: 47%;
+				}
+
+				@include desktop {
+					width: 49%;
+				}
+			}
+		}
+	}
+}
+
+// PHOTO GALLERY //
+
+.photo-gallery {
+	background-color: $secondarywhite;
+	padding: 0.1rem 0.95rem 1rem 0.9rem;
+
+	h2 {
+		margin-bottom: 0.7rem;
+
+		@include tablet {
+			font-weight: 600;
+			margin: 3.1rem 0 1.25rem 1.25rem;
+		}
+
+		@include desktop {
+			margin: 3.1rem 0 2rem 7.25rem;
+		}
+	}
+
+	.gallery {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.5rem;
+		flex-direction: column;
+
+		@include tablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0 1.25rem;
+		}
+
+		@include desktop {
+			margin: 0 7.25rem 0.9rem 7.25rem;
+		}
+
+		&__img {
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				transition: transform 0.3s ease-in-out;
+
+				&:hover {
+					transform: scale(1.5);
+				}
+			}
+
+			@include tablet {
+				width: 31%;
+			}
+
+			@include desktop {
+				width: 31.9%;
+			}
+		}
+	}
+}

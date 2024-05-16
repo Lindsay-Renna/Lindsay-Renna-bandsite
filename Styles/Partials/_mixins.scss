@@ -1,0 +1,23 @@
+@use "./variables" as *;
+
+@mixin tablet {
+	@media (min-width: $tablet-breakpoint) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $desktop-breakpoint) {
+		@content;
+	}
+}
+
+@mixin flex-center-horizontal {
+	display: flex;
+	justify-content: center;
+}
+@mixin flex-center-both {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

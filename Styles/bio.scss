@@ -65,8 +65,7 @@
 
 	.bio-quote {
 		@include tablet {
-			display: flex;
-			justify-content: center;
+			@include flex-center-horizontal;
 			width: 100%;
 		}
 
@@ -106,6 +105,8 @@
 				font-weight: 600;
 				font-size: 0.85rem;
 				word-spacing: 0.1rem;
+				line-height: 1.5rem;
+				margin-bottom: 0.5rem;
 
 				@include tablet {
 					font-size: 1.3rem;
@@ -122,9 +123,10 @@
 			}
 
 			.quote--small {
+				margin: 0;
+
 				@include tablet {
 					font-size: 1rem;
-					margin: 0;
 				}
 			}
 		}
@@ -132,54 +134,52 @@
 
 	.bio-text {
 		@include tablet {
-			margin: 0 5rem 2rem 5rem;
-		}
-
-		@include desktop {
-			margin: 3rem 5rem 2rem 12.75rem;
-		}
-
-		&__header {
-			margin-top: 1.5rem;
+			@include flex-center-horizontal;
 		}
 
 		&__wrapper {
+			width: 95%;
+			@include flex-center-horizontal;
+			flex-wrap: wrap;
+
 			@include tablet {
-				display: flex;
-				justify-content: flex-start;
-				gap: 1.4rem;
+				width: 78%;
+				gap: 1.75rem;
+				margin-bottom: 2rem;
 			}
 
 			@include desktop {
-				gap: 1.2rem;
-			}
-		}
-
-		.bio-text__1 {
-			padding-right: 0.86rem;
-
-			@include tablet {
-				padding: 0;
-				margin: 0;
-				width: 50%;
+				width: 68%;
+				gap: 1.55rem;
 			}
 
-			@include desktop {
-				width: 43%;
-			}
-		}
+			h3 {
+				width: 100%;
+				margin: 1.5rem 0 1rem 0;
 
-		.bio-text__2 {
-			padding-right: 0.7rem;
-
-			@include tablet {
-				padding: 0;
-				margin: 0;
-				width: 50%;
+				@include tablet {
+					margin: 3rem 0 0 0;
+				}
 			}
 
-			@include desktop {
-				width: 43%;
+			.bio-text__1 {
+				@include tablet {
+					width: 47%;
+				}
+
+				@include desktop {
+					width: 48%;
+				}
+			}
+
+			.bio-text__2 {
+				@include tablet {
+					width: 47%;
+				}
+
+				@include desktop {
+					width: 49%;
+				}
 			}
 		}
 	}
@@ -196,7 +196,7 @@
 
 		@include tablet {
 			font-weight: 600;
-			margin: 3.1rem 0 1.25rem 0;
+			margin: 3.1rem 0 1.25rem 1.25rem;
 		}
 
 		@include desktop {
@@ -207,7 +207,7 @@
 	.gallery {
 		display: flex;
 		justify-content: space-between;
-		gap: 1rem;
+		gap: 0.5rem;
 		flex-direction: column;
 
 		@include tablet {

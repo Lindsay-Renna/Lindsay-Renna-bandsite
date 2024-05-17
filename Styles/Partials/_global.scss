@@ -216,11 +216,13 @@ footer {
 	}
 
 	.bandsite-link {
-		margin-top: 2.1rem;
+		img {
+			margin-top: 2rem;
+		}
 
 		@include tablet {
 			position: absolute;
-			bottom: 19rem;
+			bottom: 18.5rem;
 			right: 2.25rem;
 		}
 

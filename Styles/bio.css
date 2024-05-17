@@ -227,13 +227,13 @@ footer .contact .contact-info h3 {
     margin-top: 1.25rem;
   }
 }
-footer .bandsite-link {
-  margin-top: 2.1rem;
+footer .bandsite-link img {
+  margin-top: 2rem;
 }
 @media (min-width: 768px) {
   footer .bandsite-link {
     position: absolute;
-    bottom: 19rem;
+    bottom: 18.5rem;
     right: 2.25rem;
   }
 }

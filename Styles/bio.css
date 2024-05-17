@@ -102,7 +102,7 @@ header .band-logo {
 }
 @media (min-width: 1280px) {
   header .band-logo {
-    padding: 2rem 0 1.5rem 8rem;
+    padding: 1rem 0 1.7rem 8rem;
   }
 }
 header .header-nav__list {
@@ -127,7 +127,7 @@ header .header-nav__list li {
 @media (min-width: 1280px) {
   header .header-nav__list li {
     margin-right: 2rem;
-    padding-bottom: 1.25rem;
+    padding: 2rem 0 1.35rem 0;
   }
 }
 header .header-nav__list li a {

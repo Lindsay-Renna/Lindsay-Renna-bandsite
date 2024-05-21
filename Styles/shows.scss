@@ -1,0 +1,60 @@
+@use "../styles/Partials/global" as *;
+@use "../styles/Partials/mixins" as *;
+@use "../styles/Partials/variables" as *;
+@use "../styles/Partials/fonts" as *;
+
+// HERO //
+
+.hero {
+	background-image: url(../assets/Images/hero-shows.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 45vh;
+
+	@include tablet {
+		height: 54.75vh;
+	}
+
+	@include desktop {
+		height: 76.5vh;
+	}
+
+	&__overlay {
+		background-color: $Bandsite-black-50;
+		height: 100%;
+		z-index: 1;
+		color: $primarywhite;
+
+		h3 {
+			margin-top: 0;
+			padding: 2rem 0 0 1rem;
+			font-weight: 400;
+		}
+
+		h1 {
+			padding: 0.25rem 0 0 1rem;
+			margin-top: 0;
+			font-size: 2.5rem;
+			line-height: 3rem;
+			width: 75%;
+
+			@include tablet {
+				padding: 0.25rem 0 0 2.5rem;
+			}
+
+			@include desktop {
+				padding: 0.25rem 0 0 8.15rem;
+				word-spacing: 0.25rem;
+			}
+		}
+
+		.sound-cloud {
+			@include flex-center-both;
+			width: 100%;
+
+			iframe {
+				width: 90%;
+			}
+		}
+	}
+}

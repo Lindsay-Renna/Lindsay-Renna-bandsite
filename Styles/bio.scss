@@ -105,8 +105,8 @@
 				font-weight: 600;
 				font-size: 0.85rem;
 				word-spacing: 0.1rem;
-				line-height: 1.5rem;
-				margin-bottom: 0.5rem;
+				line-height: 1.375rem;
+				margin: 0.55rem 0 0.3rem 0;
 
 				@include tablet {
 					font-size: 1.3rem;
@@ -138,19 +138,19 @@
 		}
 
 		&__wrapper {
-			width: 95%;
+			width: 94.5%;
 			@include flex-center-horizontal;
 			flex-wrap: wrap;
 
 			@include tablet {
 				width: 78%;
-				gap: 1.75rem;
+				gap: 1.5rem;
 				margin-bottom: 2rem;
 			}
 
 			@include desktop {
 				width: 68%;
-				gap: 1.55rem;
+				gap: 1.25rem;
 			}
 
 			h3 {
@@ -163,18 +163,29 @@
 			}
 
 			.bio-text__1 {
+				font-size: 0.8rem;
+				padding-right: 0.15rem;
+
 				@include tablet {
 					width: 47%;
+					margin-top: 0;
+					font-size: 0.8125rem;
+					padding: 0;
 				}
 
 				@include desktop {
-					width: 48%;
+					width: 48.5%;
 				}
 			}
 
 			.bio-text__2 {
+				font-size: 0.8rem;
+
 				@include tablet {
 					width: 47%;
+					margin-top: 0;
+					font-size: 0.8125rem;
+					padding: 0;
 				}
 
 				@include desktop {

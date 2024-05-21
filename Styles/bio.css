@@ -363,8 +363,8 @@ footer .copyright {
   font-weight: 600;
   font-size: 0.85rem;
   word-spacing: 0.1rem;
-  line-height: 1.5rem;
-  margin-bottom: 0.5rem;
+  line-height: 1.375rem;
+  margin: 0.55rem 0 0.3rem 0;
 }
 @media (min-width: 768px) {
   .bio .bio-quote__wrapper .quote {
@@ -396,7 +396,7 @@ footer .copyright {
   }
 }
 .bio .bio-text__wrapper {
-  width: 95%;
+  width: 94.5%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -404,14 +404,14 @@ footer .copyright {
 @media (min-width: 768px) {
   .bio .bio-text__wrapper {
     width: 78%;
-    gap: 1.75rem;
+    gap: 1.5rem;
     margin-bottom: 2rem;
   }
 }
 @media (min-width: 1280px) {
   .bio .bio-text__wrapper {
     width: 68%;
-    gap: 1.55rem;
+    gap: 1.25rem;
   }
 }
 .bio .bio-text__wrapper h3 {
@@ -423,19 +423,32 @@ footer .copyright {
     margin: 3rem 0 0 0;
   }
 }
+.bio .bio-text__wrapper .bio-text__1 {
+  font-size: 0.8rem;
+  padding-right: 0.15rem;
+}
 @media (min-width: 768px) {
   .bio .bio-text__wrapper .bio-text__1 {
     width: 47%;
+    margin-top: 0;
+    font-size: 0.8125rem;
+    padding: 0;
   }
 }
 @media (min-width: 1280px) {
   .bio .bio-text__wrapper .bio-text__1 {
-    width: 48%;
+    width: 48.5%;
   }
+}
+.bio .bio-text__wrapper .bio-text__2 {
+  font-size: 0.8rem;
 }
 @media (min-width: 768px) {
   .bio .bio-text__wrapper .bio-text__2 {
     width: 47%;
+    margin-top: 0;
+    font-size: 0.8125rem;
+    padding: 0;
   }
 }
 @media (min-width: 1280px) {

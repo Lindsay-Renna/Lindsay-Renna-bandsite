@@ -301,9 +301,14 @@
 							border-radius: 0.25rem;
 							min-height: 2.25rem;
 							font-family: "AvenirNext";
+							resize: none;
 
 							&:active {
 								border: 1px solid $Bandsite-black;
+							}
+
+							.input--error {
+								border: 1px solid red;
 							}
 						}
 

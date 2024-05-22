@@ -575,9 +575,13 @@ button:hover {
   border-radius: 0.25rem;
   min-height: 2.25rem;
   font-family: "AvenirNext";
+  resize: none;
 }
 .comments__wrapper .form-wrapper form ul li input:active, .comments__wrapper .form-wrapper form ul li #comment:active {
   border: 1px solid #323232;
+}
+.comments__wrapper .form-wrapper form ul li input .input--error, .comments__wrapper .form-wrapper form ul li #comment .input--error {
+  border: 1px solid red;
 }
 .comments__wrapper .form-wrapper form ul li #comment {
   min-height: 5rem;

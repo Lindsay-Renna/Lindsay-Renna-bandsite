@@ -254,3 +254,20 @@ footer {
 		}
 	}
 }
+
+// BUTTON //
+
+button {
+	color: $primarywhite;
+	background-color: $Bandsite-black;
+	text-align: center;
+	width: 100%;
+	font-family: "AvenirNext";
+	height: 2.5rem;
+	padding: 0 2rem;
+	border-radius: 0.25rem;
+
+	&:hover {
+		background-color: $darkBlack;
+	}
+}

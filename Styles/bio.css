@@ -264,6 +264,20 @@ footer .copyright {
   }
 }
 
+button {
+  color: #ffffff;
+  background-color: #323232;
+  text-align: center;
+  width: 100%;
+  font-family: "AvenirNext";
+  height: 2.5rem;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+}
+button:hover {
+  background-color: #000000;
+}
+
 .hero {
   background-image: url(../../Assets/Images/hero-bio.jpg);
   background-size: cover;
@@ -466,7 +480,7 @@ footer .copyright {
 
 .photo-gallery {
   background-color: #fafafa;
-  padding: 0.1rem 0.95rem 1rem 0.9rem;
+  padding: 1rem 0.95rem 1rem 1rem;
 }
 .photo-gallery h2 {
   margin-bottom: 0.7rem;
@@ -519,4 +533,61 @@ footer .copyright {
   .photo-gallery .gallery__img {
     width: 31.9%;
   }
+}
+
+.comments {
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+.comments__wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.comments__wrapper .user-image {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-image: url(../assets/Images/Mohan-muruge.jpg);
+  background-position: 25%;
+  background-size: cover;
+  margin-top: 1rem;
+}
+.comments__wrapper .form-wrapper {
+  width: 95%;
+}
+.comments__wrapper .form-wrapper form ul {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #afafaf;
+  font-size: 0.675rem;
+}
+.comments__wrapper .form-wrapper form ul li {
+  width: 100%;
+}
+.comments__wrapper .form-wrapper form ul li input, .comments__wrapper .form-wrapper form ul li #comment {
+  box-sizing: border-box;
+  width: 99%;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 0.25rem;
+  min-height: 2.25rem;
+  font-family: "AvenirNext";
+}
+.comments__wrapper .form-wrapper form ul li input:active, .comments__wrapper .form-wrapper form ul li #comment:active {
+  border: 1px solid #323232;
+}
+.comments__wrapper .form-wrapper form ul li #comment {
+  min-height: 5rem;
+  padding-top: 0.5rem;
+}
+.comments__wrapper .form-wrapper form ul li:nth-child(2),
+.comments__wrapper .form-wrapper form ul li:nth-child(4) {
+  margin-bottom: 1.5rem;
+}
+.comments__wrapper .form-wrapper form ul li:nth-child(1),
+.comments__wrapper .form-wrapper form ul li:nth-child(3) {
+  margin-bottom: 0.25rem;
 }/*# sourceMappingURL=bio.css.map */

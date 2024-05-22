@@ -270,6 +270,8 @@ button {
   text-align: center;
   width: 100%;
   font-family: "AvenirNext";
+  letter-spacing: 0.05rem;
+  font-size: 0.875rem;
   height: 2.5rem;
   padding: 0 2rem;
   border-radius: 0.25rem;

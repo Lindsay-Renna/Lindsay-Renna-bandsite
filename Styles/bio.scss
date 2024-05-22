@@ -260,22 +260,26 @@
 	padding: 0 1rem;
 	margin-bottom: 3rem;
 
-	h2 {
-	}
-
-	&__wrapper {
+	.new-comments {
 		display: flex;
 		gap: 1rem;
 		align-items: flex-start;
+		border-bottom: 1px solid $secondarygrey;
 
 		.user-image {
-			width: 2.25rem;
-			height: 2.25rem;
-			border-radius: 50%;
-			background-image: url(../assets/Images/Mohan-muruge.jpg);
-			background-position: 25%;
-			background-size: cover;
-			margin-top: 1rem;
+			img {
+				width: 2.25rem;
+				height: 2.25rem;
+				border-radius: 50%;
+				object-fit: cover;
+				object-position: 5%;
+				margin-top: 1rem;
+
+				@include tablet {
+					width: 3rem;
+					height: 3rem;
+				}
+			}
 		}
 
 		.form-wrapper {
@@ -286,12 +290,17 @@
 					width: 100%;
 					list-style-type: none;
 					padding: 0;
-					margin: 0;
+					margin: 0 0 1rem 0;
 					color: $primarygrey;
 					font-size: 0.675rem;
 
 					li {
 						width: 100%;
+
+						label {
+							margin-bottom: 0.25rem;
+							display: block;
+						}
 
 						input {
 							box-sizing: border-box;
@@ -302,6 +311,7 @@
 							min-height: 2.25rem;
 							font-family: "AvenirNext";
 							resize: none;
+							margin-bottom: 1.5rem;
 
 							&:active {
 								border: 1px solid $Bandsite-black;
@@ -318,17 +328,57 @@
 							padding-top: 0.5rem;
 						}
 					}
-
-					li:nth-child(2),
-					li:nth-child(4) {
-						margin-bottom: 1.5rem;
-					}
-
-					li:nth-child(1),
-					li:nth-child(3) {
-						margin-bottom: 0.25rem;
-					}
 				}
+			}
+		}
+	}
+
+	.posted-comments {
+		display: flex;
+		gap: 1rem;
+		border-bottom: 1px solid $secondarygrey;
+
+		.user-image {
+			img {
+				width: 2.25rem;
+				height: 2.25rem;
+				border-radius: 50%;
+				object-fit: cover;
+				object-position: 5%;
+				margin-top: 1rem;
+
+				@include tablet {
+					width: 3rem;
+					height: 3rem;
+				}
+			}
+
+			.null-image {
+				width: 2.25rem;
+				height: 2.25rem;
+				border-radius: 50%;
+				background-color: $secondarygrey;
+				margin-top: 1rem;
+			}
+		}
+
+		.comments__wrapper {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			width: 95%;
+
+			h3 {
+				margin-bottom: 0;
+			}
+
+			.time-stamp {
+				color: $primarygrey;
+				margin-bottom: 0;
+			}
+
+			.user-comment {
+				width: 100%;
 			}
 		}
 	}

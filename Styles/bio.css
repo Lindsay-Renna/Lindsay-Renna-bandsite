@@ -270,6 +270,8 @@ button {
   text-align: center;
   width: 100%;
   font-family: "AvenirNext";
+  letter-spacing: 0.05rem;
+  font-size: 0.875rem;
   height: 2.5rem;
   padding: 0 2rem;
   border-radius: 0.25rem;
@@ -539,35 +541,47 @@ button:hover {
   padding: 0 1rem;
   margin-bottom: 3rem;
 }
-.comments__wrapper {
+.comments .new-comments {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  border-bottom: 1px solid #e1e1e1;
 }
-.comments__wrapper .user-image {
+.comments .new-comments .user-image img {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
-  background-image: url(../assets/Images/Mohan-muruge.jpg);
-  background-position: 25%;
-  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 5%;
+     object-position: 5%;
   margin-top: 1rem;
 }
-.comments__wrapper .form-wrapper {
+@media (min-width: 768px) {
+  .comments .new-comments .user-image img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.comments .new-comments .form-wrapper {
   width: 95%;
 }
-.comments__wrapper .form-wrapper form ul {
+.comments .new-comments .form-wrapper form ul {
   width: 100%;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1rem 0;
   color: #afafaf;
   font-size: 0.675rem;
 }
-.comments__wrapper .form-wrapper form ul li {
+.comments .new-comments .form-wrapper form ul li {
   width: 100%;
 }
-.comments__wrapper .form-wrapper form ul li input, .comments__wrapper .form-wrapper form ul li #comment {
+.comments .new-comments .form-wrapper form ul li label {
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.comments .new-comments .form-wrapper form ul li input, .comments .new-comments .form-wrapper form ul li #comment {
   box-sizing: border-box;
   width: 99%;
   background-color: #fafafa;
@@ -576,22 +590,59 @@ button:hover {
   min-height: 2.25rem;
   font-family: "AvenirNext";
   resize: none;
+  margin-bottom: 1.5rem;
 }
-.comments__wrapper .form-wrapper form ul li input:active, .comments__wrapper .form-wrapper form ul li #comment:active {
+.comments .new-comments .form-wrapper form ul li input:active, .comments .new-comments .form-wrapper form ul li #comment:active {
   border: 1px solid #323232;
 }
-.comments__wrapper .form-wrapper form ul li input .input--error, .comments__wrapper .form-wrapper form ul li #comment .input--error {
+.comments .new-comments .form-wrapper form ul li input .input--error, .comments .new-comments .form-wrapper form ul li #comment .input--error {
   border: 1px solid red;
 }
-.comments__wrapper .form-wrapper form ul li #comment {
+.comments .new-comments .form-wrapper form ul li #comment {
   min-height: 5rem;
   padding-top: 0.5rem;
 }
-.comments__wrapper .form-wrapper form ul li:nth-child(2),
-.comments__wrapper .form-wrapper form ul li:nth-child(4) {
-  margin-bottom: 1.5rem;
+.comments .posted-comments {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid #e1e1e1;
 }
-.comments__wrapper .form-wrapper form ul li:nth-child(1),
-.comments__wrapper .form-wrapper form ul li:nth-child(3) {
-  margin-bottom: 0.25rem;
+.comments .posted-comments .user-image img {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 5%;
+     object-position: 5%;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .comments .posted-comments .user-image img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.comments .posted-comments .user-image .null-image {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  margin-top: 1rem;
+}
+.comments .posted-comments .comments__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 95%;
+}
+.comments .posted-comments .comments__wrapper h3 {
+  margin-bottom: 0;
+}
+.comments .posted-comments .comments__wrapper .time-stamp {
+  color: #afafaf;
+  margin-bottom: 0;
+}
+.comments .posted-comments .comments__wrapper .user-comment {
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

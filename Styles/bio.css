@@ -143,12 +143,19 @@ header .header-nav__list li a {
 }
 header .header-nav__list .active-page {
   border-bottom: 3px solid #ffffff;
+  font-weight: 700;
 }
 header .header-nav__list .inactive-page {
   border-bottom: 3px solid transparent;
 }
 header .header-nav__list .inactive-page a {
   color: #e1e1e1;
+}
+header .header-nav__list .inactive-page a:hover {
+  color: #ffffff;
+}
+header .header-nav__list .inactive-page:hover {
+  border-bottom: 3px solid #ffffff;
 }
 
 footer {

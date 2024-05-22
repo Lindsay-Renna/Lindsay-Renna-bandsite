@@ -9,7 +9,7 @@
 	background-image: url(../assets/Images/hero-shows.jpg);
 	background-size: cover;
 	background-position: center;
-	height: 45vh;
+	height: 39vh;
 
 	@include tablet {
 		height: 54.75vh;
@@ -34,8 +34,7 @@
 		h1 {
 			padding: 0.25rem 0 0 1rem;
 			margin-top: 0;
-			font-size: 2.5rem;
-			line-height: 3rem;
+
 			width: 75%;
 
 			@include tablet {
@@ -53,8 +52,15 @@
 			width: 100%;
 
 			iframe {
-				width: 90%;
+				width: 92.5%;
 			}
 		}
 	}
+}
+
+// SHOWS //
+
+.shows {
+	padding: 0 1rem;
+	margin-top: 2rem;
 }

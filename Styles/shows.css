@@ -143,12 +143,19 @@ header .header-nav__list li a {
 }
 header .header-nav__list .active-page {
   border-bottom: 3px solid #ffffff;
+  font-weight: 700;
 }
 header .header-nav__list .inactive-page {
   border-bottom: 3px solid transparent;
 }
 header .header-nav__list .inactive-page a {
   color: #e1e1e1;
+}
+header .header-nav__list .inactive-page a:hover {
+  color: #ffffff;
+}
+header .header-nav__list .inactive-page:hover {
+  border-bottom: 3px solid #ffffff;
 }
 
 footer {
@@ -261,7 +268,7 @@ footer .copyright {
   background-image: url(../assets/Images/hero-shows.jpg);
   background-size: cover;
   background-position: center;
-  height: 45vh;
+  height: 39vh;
 }
 @media (min-width: 768px) {
   .hero {
@@ -287,8 +294,6 @@ footer .copyright {
 .hero__overlay h1 {
   padding: 0.25rem 0 0 1rem;
   margin-top: 0;
-  font-size: 2.5rem;
-  line-height: 3rem;
   width: 75%;
 }
 @media (min-width: 768px) {
@@ -309,5 +314,10 @@ footer .copyright {
   width: 100%;
 }
 .hero__overlay .sound-cloud iframe {
-  width: 90%;
+  width: 92.5%;
+}
+
+.shows {
+  padding: 0 1rem;
+  margin-top: 2rem;
 }/*# sourceMappingURL=shows.css.map */

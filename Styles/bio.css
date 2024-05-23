@@ -280,6 +280,10 @@ button:hover {
   background-color: #000000;
 }
 
+.error {
+  border: 1px solid red !important;
+}
+
 .hero {
   background-image: url(../../Assets/Images/hero-bio.jpg);
   background-size: cover;
@@ -594,9 +598,6 @@ button:hover {
 }
 .comments .new-comments .form-wrapper form ul li input:active, .comments .new-comments .form-wrapper form ul li #comment:active {
   border: 1px solid #323232;
-}
-.comments .new-comments .form-wrapper form ul li input .input--error, .comments .new-comments .form-wrapper form ul li #comment .input--error {
-  border: 1px solid red;
 }
 .comments .new-comments .form-wrapper form ul li #comment {
   min-height: 5rem;

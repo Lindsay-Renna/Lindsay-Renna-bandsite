@@ -280,6 +280,10 @@ button:hover {
   background-color: #000000;
 }
 
+.error {
+  border: 1px solid red !important;
+}
+
 .hero {
   background-image: url(../assets/Images/hero-shows.jpg);
   background-size: cover;

@@ -68,7 +68,7 @@ newCommentForm.addEventListener("submit", (event) => {
 		userImage: "/Mohan-muruge.jpg",
 	};
 
-	comments.push(newComment);
+	comments.unshift(newComment);
 	newCommentForm.reset();
 	postComment(comments[comments.length - 1]);
 
@@ -105,7 +105,7 @@ const postComment = (comment) => {
 	if (comment.image === null) {
 		const imageElement = document.createElement("div");
 		imageElement.classList.add("null-img");
-		commentList.appendChild(imageElement);
+		imageContainer.appendChild(imageElement);
 	} else {
 		const imageElement = document.createElement("img");
 		imageElement.classList.add("img");
@@ -119,7 +119,7 @@ const postComment = (comment) => {
 	commentList.appendChild(commentContainer);
 
 	// user name data
-	const commenterName = document.createElement("h3");
+	const commenterName = document.createElement("h5");
 	commenterName.classList.add("user-name");
 	commenterName.textContent = comment.name;
 	commentContainer.appendChild(commenterName);
@@ -127,7 +127,7 @@ const postComment = (comment) => {
 	// time-stamp data
 	const commentTime = document.createElement("p");
 	commentTime.classList.add("time-stamp");
-	commentTime.textContent = comment.date;
+	commentTime.textContent = formatDate(comment.date);
 	commentContainer.appendChild(commentTime);
 
 	// user comment data
@@ -137,7 +137,11 @@ const postComment = (comment) => {
 	commentContainer.appendChild(commentText);
 };
 
+function formatDate(date) {
+	const options = { year: "numeric", month: "numeric", day: "2-digit" };
+	return new Intl.DateTimeFormat("en-US", options).format(date);
+}
+
 postComment(comments[0]);
 postComment(comments[1]);
 postComment(comments[2]);
-postComment(comments[3]);

@@ -46,7 +46,6 @@
 
 .bio {
 	padding: 0 0.95rem 0 0.9rem;
-	color: $Bandsite-black;
 	background-color: $primarywhite;
 
 	h2 {
@@ -292,7 +291,7 @@
 					padding: 0;
 					margin: 0 0 1rem 0;
 					color: $primarygrey;
-					font-size: 0.675rem;
+					font-size: 0.6rem;
 
 					li {
 						width: 100%;
@@ -301,10 +300,6 @@
 							margin-bottom: 0.25rem;
 							display: block;
 						}
-
-						// .error {
-						// 	border: 1px solid red;
-						// }
 
 						input {
 							box-sizing: border-box;
@@ -339,6 +334,8 @@
 		border-bottom: 1px solid $secondarygrey;
 
 		.user-image {
+			width: 15%;
+
 			img {
 				width: 2.25rem;
 				height: 2.25rem;
@@ -353,12 +350,12 @@
 				}
 			}
 
-			.null-image {
+			.null-img {
 				width: 2.25rem;
 				height: 2.25rem;
 				border-radius: 50%;
 				background-color: $secondarygrey;
-				margin-top: 1rem;
+				margin-top: 1.5rem;
 			}
 		}
 
@@ -366,10 +363,11 @@
 			display: flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
-			width: 95%;
+			min-width: 85%;
 
-			h3 {
-				margin-bottom: 0;
+			h5 {
+				margin: 0.825rem 0 0 0;
+				font-weight: 600;
 			}
 
 			.time-stamp {
@@ -379,6 +377,7 @@
 
 			.user-comment {
 				width: 100%;
+				margin-top: 0.25rem;
 			}
 		}
 	}

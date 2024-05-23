@@ -259,20 +259,31 @@
 	padding: 0 1rem;
 	margin-bottom: 3rem;
 
+	@include tablet {
+		padding: 2rem 2rem 0 2rem;
+	}
+
+	h2 {
+		@include tablet {
+			font-size: 2.25rem;
+			font-weight: 600;
+		}
+	}
+
 	.new-comments {
 		display: flex;
 		gap: 1rem;
 		align-items: flex-start;
 		border-bottom: 1px solid $secondarygrey;
 
-		.user-image {
-			img {
-				width: 2.25rem;
-				height: 2.25rem;
-				border-radius: 50%;
-				object-fit: cover;
-				object-position: 5%;
-				margin-top: 1rem;
+		@include tablet {
+			margin: 0 4rem;
+			gap: 0.6rem;
+		}
+
+		.user-image-container {
+			.user-image {
+				@include user-image;
 
 				@include tablet {
 					width: 3rem;
@@ -295,6 +306,7 @@
 
 					li {
 						width: 100%;
+						display: grid;
 
 						label {
 							margin-bottom: 0.25rem;
@@ -303,12 +315,13 @@
 
 						input {
 							box-sizing: border-box;
-							width: 99%;
+							width: auto;
 							background-color: $secondarywhite;
 							border: 1px solid $secondarygrey;
 							border-radius: 0.25rem;
 							min-height: 2.25rem;
-							font-family: "AvenirNext";
+							font-family: "AvenirNext", "Segoe UI", Tahoma, Geneva, Verdana,
+								sans-serif;
 							resize: none;
 							margin-bottom: 1.5rem;
 
@@ -330,54 +343,62 @@
 
 	.posted-comments {
 		display: flex;
-		gap: 1rem;
-		border-bottom: 1px solid $secondarygrey;
+		flex-direction: column;
+		gap: 0.5rem;
 
-		.user-image {
-			width: 15%;
+		@include tablet {
+			margin: 0rem 4rem;
+		}
 
-			img {
-				width: 2.25rem;
-				height: 2.25rem;
-				border-radius: 50%;
-				object-fit: cover;
-				object-position: 5%;
-				margin-top: 1rem;
+		.comment-block {
+			display: flex;
+			gap: 1rem;
+			border-bottom: 1px solid $secondarygrey;
+			width: 100%;
 
-				@include tablet {
-					width: 3rem;
-					height: 3rem;
+			.user-image-container {
+				.user-image {
+					@include user-image;
+
+					@include tablet {
+						width: 3rem;
+						height: 3rem;
+					}
+				}
+
+				.null-img {
+					width: 2.25rem;
+					height: 2.25rem;
+					border-radius: 50%;
+					background-color: $secondarygrey;
+					margin-top: 1.5rem;
+
+					@include tablet {
+						width: 3rem;
+						height: 3rem;
+					}
 				}
 			}
 
-			.null-img {
-				width: 2.25rem;
-				height: 2.25rem;
-				border-radius: 50%;
-				background-color: $secondarygrey;
-				margin-top: 1.5rem;
-			}
-		}
+			.comments__wrapper {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
 
-		.comments__wrapper {
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
-			min-width: 85%;
+				h5 {
+					margin: 0.825rem 0 0 0;
+					font-weight: 600;
+				}
 
-			h5 {
-				margin: 0.825rem 0 0 0;
-				font-weight: 600;
-			}
+				.time-stamp {
+					color: $primarygrey;
+					margin-bottom: 0;
+				}
 
-			.time-stamp {
-				color: $primarygrey;
-				margin-bottom: 0;
-			}
-
-			.user-comment {
-				width: 100%;
-				margin-top: 0.25rem;
+				.user-comment {
+					width: 100%;
+					margin-top: 0.25rem;
+				}
 			}
 		}
 	}

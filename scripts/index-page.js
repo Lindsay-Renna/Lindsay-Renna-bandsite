@@ -1,9 +1,9 @@
 const comments = [
 	{
-		name: "Victor Pinto",
+		name: "Isaac Tadesse",
 		comment:
-			"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-		date: new Date(2023, 10, 2),
+			"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+		date: new Date(2023, 9, 20),
 		image: null,
 	},
 	{
@@ -14,33 +14,13 @@ const comments = [
 		image: null,
 	},
 	{
-		name: "Isaac Tadesse",
+		name: "Victor Pinto",
 		comment:
-			"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-		date: new Date(2023, 9, 20),
+			"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+		date: new Date(2023, 10, 2),
 		image: null,
 	},
 ];
-
-console.log(comments);
-
-{
-	/* <div class="posted-comments">
-<div class="user-image">
-    <div class="null-image"></div>
-</div>
-<div class="comments__wrapper">
-    <h3 class="user-name">Lindsay Renna</h3>
-    <p class="time-stamp">11/02/2023</p>
-    <p class="user-comment">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-        rerum soluta fugiat odio explicabo, reiciendis odit, repellat quam
-        cumque iusto rem amet esse labore sapiente adipisci? Delectus
-        consectetur illum voluptatum!
-    </p>
-</div>
-</div> */
-}
 
 const newCommentForm = document.querySelector(".new-comment-form");
 
@@ -58,49 +38,54 @@ newCommentForm.addEventListener("submit", (event) => {
 	nameInput.classList.remove("error");
 	commentInput.classList.remove("error");
 
-	nameValidation();
-	commentValidation();
+	// Validation & Create comment
 
-	let newComment = {
-		name: userName,
-		comment: commentText,
-		date: new Date(),
-		userImage: "/Mohan-muruge.jpg",
-	};
+	if (nameValidation() && commentValidation()) {
+		let newComment = {
+			name: userName,
+			comment: commentText,
+			date: new Date(),
+			image: "Mohan-muruge.jpg",
+		};
 
-	comments.unshift(newComment);
-	newCommentForm.reset();
-	postComment(comments[comments.length - 1]);
+		comments.push(newComment);
+		newCommentForm.reset();
+		postComment(newComment);
+	}
 
 	console.log(comments);
 
-	// Form Validation
+	// Validation functions
 
 	function nameValidation() {
 		if (userName.length === 0) {
 			nameInput.classList.add("error");
-			return;
+			return false;
 		}
+		return true;
 	}
 
 	function commentValidation() {
 		if (commentText.length === 0) {
 			commentInput.classList.add("error");
-			return;
+			return false;
 		}
+		return true;
 	}
 });
 
-// make past-comments as an object of username, timestamp, comment and user image
-// do a loop over the array to create the comments
+// Create comments on the page
 
 const postComment = (comment) => {
 	const commentList = document.querySelector(".posted-comments");
+	const commentBlock = document.createElement("div");
+	commentBlock.classList.add("comment-block");
+	commentList.appendChild(commentBlock);
 
 	// add user profile image
 	const imageContainer = document.createElement("div");
-	imageContainer.classList.add("user-image");
-	commentList.appendChild(imageContainer);
+	imageContainer.classList.add("user-image-container");
+	commentBlock.appendChild(imageContainer);
 
 	if (comment.image === null) {
 		const imageElement = document.createElement("div");
@@ -108,15 +93,15 @@ const postComment = (comment) => {
 		imageContainer.appendChild(imageElement);
 	} else {
 		const imageElement = document.createElement("img");
-		imageElement.classList.add("img");
-		imageElement.setAttribute("src", `./Assets/Icons/SVG/${comment.image}`);
-		commentList.appendChild(imageElement);
+		imageElement.classList.add("user-image");
+		imageElement.setAttribute("src", `./assets/Images/${comment.image}`);
+		imageContainer.appendChild(imageElement);
 	}
 
 	// add comments data
 	const commentContainer = document.createElement("div");
 	commentContainer.classList.add("comments__wrapper");
-	commentList.appendChild(commentContainer);
+	commentBlock.appendChild(commentContainer);
 
 	// user name data
 	const commenterName = document.createElement("h5");
@@ -135,13 +120,14 @@ const postComment = (comment) => {
 	commentText.classList.add("user-comment");
 	commentText.textContent = comment.comment;
 	commentContainer.appendChild(commentText);
+
+	commentList.insertBefore(commentBlock, commentList.firstChild);
 };
 
 function formatDate(date) {
-	const options = { year: "numeric", month: "numeric", day: "2-digit" };
+	const options = { year: "numeric", month: "2-digit", day: "2-digit" };
 	return new Intl.DateTimeFormat("en-US", options).format(date);
 }
 
-postComment(comments[0]);
-postComment(comments[1]);
-postComment(comments[2]);
+// do a loop over the array to create the comments
+comments.forEach(postComment);

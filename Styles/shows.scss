@@ -60,7 +60,32 @@
 
 // SHOWS //
 
-.shows {
-	padding: 0 1rem;
-	margin-top: 2rem;
+.show-info {
+	padding: 0;
+	margin: 2rem 0;
+
+	h2 {
+		margin-left: 1rem;
+	}
+
+	.show {
+		&__block {
+			padding: 1rem;
+			border-bottom: 1px solid $secondarygrey;
+
+			h6 {
+				color: $primarygrey;
+				font-weight: 400;
+				margin: 0 0 0.5rem 0;
+			}
+
+			p {
+				margin: 0 0 1rem 0;
+			}
+
+			p.show__date {
+				font-weight: 600;
+			}
+		}
+	}
 }

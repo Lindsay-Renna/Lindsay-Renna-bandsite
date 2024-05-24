@@ -23,6 +23,7 @@ const comments = [
 ];
 
 const newCommentForm = document.querySelector(".new-comment-form");
+const commentList = document.querySelector(".posted-comments");
 
 // Form submission event
 
@@ -50,7 +51,7 @@ newCommentForm.addEventListener("submit", (event) => {
 
 		comments.push(newComment);
 		newCommentForm.reset();
-		postComment(newComment);
+		refresh();
 	}
 
 	// Validation functions
@@ -75,7 +76,6 @@ newCommentForm.addEventListener("submit", (event) => {
 // Create comments on the page
 
 const postComment = (comment) => {
-	const commentList = document.querySelector(".posted-comments");
 	const commentBlock = document.createElement("div");
 	commentBlock.classList.add("comment-block");
 	commentList.appendChild(commentBlock);
@@ -127,5 +127,10 @@ function formatDate(date) {
 	return new Intl.DateTimeFormat("en-US", options).format(date);
 }
 
-// do a loop over the array to create the comments
-comments.forEach(postComment);
+function refresh() {
+	// do a loop over the array to create the comments
+	commentList.innerHTML = "";
+	comments.forEach(postComment);
+}
+
+refresh();

@@ -349,7 +349,25 @@ button:hover {
   width: 92.5%;
 }
 
-.shows {
-  padding: 0 1rem;
-  margin-top: 2rem;
+.show-info {
+  padding: 0;
+  margin: 2rem 0;
+}
+.show-info h2 {
+  margin-left: 1rem;
+}
+.show-info .show__block {
+  padding: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.show-info .show__block h6 {
+  color: #afafaf;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+.show-info .show__block p {
+  margin: 0 0 1rem 0;
+}
+.show-info .show__block p.show__date {
+  font-weight: 600;
 }/*# sourceMappingURL=shows.css.map */

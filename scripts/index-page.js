@@ -53,8 +53,6 @@ newCommentForm.addEventListener("submit", (event) => {
 		postComment(newComment);
 	}
 
-	console.log(comments);
-
 	// Validation functions
 
 	function nameValidation() {

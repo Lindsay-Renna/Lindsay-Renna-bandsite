@@ -275,6 +275,10 @@ button {
 		justify-self: flex-end;
 	}
 
+	@include tablet {
+		width: 35%;
+	}
+
 	&:hover {
 		background-color: $darkBlack;
 	}

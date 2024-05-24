@@ -283,6 +283,11 @@ button {
     justify-self: flex-end;
   }
 }
+@media (min-width: 768px) {
+  button {
+    width: 35%;
+  }
+}
 button:hover {
   background-color: #000000;
 }
@@ -549,17 +554,23 @@ button:hover {
 
 .comments {
   padding: 0 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .comments {
     padding: 2rem 2rem 0 2rem;
+    margin-bottom: 2rem;
   }
 }
 @media (min-width: 768px) {
   .comments h2 {
     font-size: 2.25rem;
     font-weight: 600;
+  }
+}
+@media (min-width: 1280px) {
+  .comments h2 {
+    margin-left: 6rem;
   }
 }
 .comments .new-comments {
@@ -572,6 +583,12 @@ button:hover {
   .comments .new-comments {
     margin: 0 4rem;
     gap: 0.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments .new-comments {
+    margin: 0 22.375rem;
+    gap: 1rem;
   }
 }
 .comments .new-comments .user-image-container .user-image {
@@ -637,6 +654,11 @@ button:hover {
     margin: 0rem 4rem;
   }
 }
+@media (min-width: 1280px) {
+  .comments .posted-comments {
+    margin: 0 22.375rem;
+  }
+}
 .comments .posted-comments .comment-block {
   display: flex;
   gap: 1rem;
@@ -664,7 +686,7 @@ button:hover {
   height: 2.25rem;
   border-radius: 50%;
   background-color: #e1e1e1;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 @media (min-width: 768px) {
   .comments .posted-comments .comment-block .user-image-container .null-img {
@@ -676,6 +698,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
 }
 .comments .posted-comments .comment-block .comments__wrapper h5 {
   margin: 0.825rem 0 0 0;

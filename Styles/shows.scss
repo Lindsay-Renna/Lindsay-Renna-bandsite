@@ -69,9 +69,22 @@
 	}
 
 	.show {
+		.selected {
+			background-color: $secondarygrey;
+
+			&:hover {
+				background-color: $secondarygrey;
+			}
+		}
+
 		&__block {
 			padding: 1rem;
 			border-bottom: 1px solid $secondarygrey;
+
+			&:hover {
+				background-color: $secondarywhite;
+				cursor: pointer;
+			}
 
 			h6 {
 				color: $primarygrey;

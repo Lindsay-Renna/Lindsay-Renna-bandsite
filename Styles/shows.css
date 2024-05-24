@@ -356,9 +356,19 @@ button:hover {
 .show-info h2 {
   margin-left: 1rem;
 }
+.show-info .show .selected {
+  background-color: #e1e1e1;
+}
+.show-info .show .selected:hover {
+  background-color: #e1e1e1;
+}
 .show-info .show__block {
   padding: 1rem;
   border-bottom: 1px solid #e1e1e1;
+}
+.show-info .show__block:hover {
+  background-color: #fafafa;
+  cursor: pointer;
 }
 .show-info .show__block h6 {
   color: #afafaf;

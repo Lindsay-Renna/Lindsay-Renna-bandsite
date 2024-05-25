@@ -77,6 +77,7 @@
 				@include tablet {
 					justify-content: flex-start;
 					margin: 0 0 2rem 2.25rem;
+					width: 90%;
 				}
 
 				@include desktop {
@@ -89,7 +90,7 @@
 					width: 90%;
 
 					@include tablet {
-						width: 54.5%;
+						width: 58%;
 						height: 8.75rem;
 					}
 
@@ -106,7 +107,11 @@
 
 .show-info {
 	padding: 0;
-	margin: 2rem 0;
+	margin: 2rem 0 1rem 0;
+
+	@include tablet {
+		margin: 3rem 0 2rem 0;
+	}
 
 	@include desktop {
 		position: relative;
@@ -149,8 +154,8 @@
 
 			@include tablet {
 				display: flex;
-				margin: 0 1rem 0 2rem;
-				padding: 1rem 1rem;
+				margin: 0 1rem 0 1rem;
+				padding: 1rem 1rem 1rem 1.25rem;
 			}
 
 			&:hover {
@@ -175,7 +180,7 @@
 				font-size: 0.8rem;
 
 				@include tablet {
-					width: 25%;
+					width: 26%;
 					margin: 0;
 					font-size: 0.875rem;
 					align-content: center;
@@ -189,6 +194,10 @@
 			p.show__date {
 				font-weight: 600;
 
+				@include tablet {
+					width: 25.5%;
+				}
+
 				@include desktop {
 					width: 33.5%;
 				}
@@ -196,12 +205,8 @@
 
 			button {
 				@include tablet {
-					width: 10rem;
+					width: 9.5rem;
 					padding: 0 1rem;
-				}
-
-				@include desktop {
-					width: 9rem;
 				}
 			}
 		}
@@ -216,13 +221,12 @@
 
 	@include tablet {
 		visibility: visible;
-		margin: 0 0 0 2.75rem;
+		margin: 0 0 0 2rem;
 		height: auto;
 	}
 
 	@include desktop {
 		margin: 0 7.5rem 1rem 22.75rem;
-		padding: 0 1rem;
 	}
 
 	p {
@@ -231,6 +235,10 @@
 		width: 24.25%;
 		font-size: 0.75rem;
 
+		@include tablet {
+			width: 25%;
+		}
+
 		@include desktop {
 			width: 22%;
 		}
@@ -238,7 +246,7 @@
 
 	p.show__date {
 		@include desktop {
-			width: 33%;
+			width: 32.5%;
 		}
 	}
 }

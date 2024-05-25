@@ -499,6 +499,11 @@ button:hover {
   background-color: #fafafa;
   padding: 1rem 0.95rem 1rem 1rem;
 }
+@media (min-width: 768px) {
+  .photo-gallery {
+    padding: 1rem 0.95rem 2rem 1rem;
+  }
+}
 .photo-gallery h2 {
   margin-bottom: 0.7rem;
 }
@@ -566,6 +571,7 @@ button:hover {
   .comments h2 {
     font-size: 2.25rem;
     font-weight: 600;
+    margin-top: 1rem;
   }
 }
 @media (min-width: 1280px) {
@@ -637,12 +643,23 @@ button:hover {
   resize: none;
   margin-bottom: 1.5rem;
 }
+@media (min-width: 768px) {
+  .comments .new-comments .form-wrapper form ul li input, .comments .new-comments .form-wrapper form ul li #comment {
+    padding-left: 0.75rem;
+    min-height: 3rem;
+  }
+}
 .comments .new-comments .form-wrapper form ul li input:active, .comments .new-comments .form-wrapper form ul li #comment:active {
   border: 1px solid #323232;
 }
 .comments .new-comments .form-wrapper form ul li #comment {
-  min-height: 5rem;
+  min-height: 6rem;
   padding-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .comments .new-comments .form-wrapper form ul li #comment {
+    padding: 0.75rem 0 0 0.75rem;
+  }
 }
 .comments .posted-comments {
   display: flex;
@@ -664,6 +681,11 @@ button:hover {
   gap: 1rem;
   border-bottom: 1px solid #e1e1e1;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .comments .posted-comments .comment-block {
+    padding-top: 0.75rem;
+  }
 }
 .comments .posted-comments .comment-block .user-image-container .user-image {
   width: 2.25rem;

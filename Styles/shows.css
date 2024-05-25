@@ -373,6 +373,7 @@ button:hover {
   .hero__overlay .wrapper .sound-cloud {
     justify-content: flex-start;
     margin: 0 0 2rem 2.25rem;
+    width: 90%;
   }
 }
 @media (min-width: 1280px) {
@@ -387,7 +388,7 @@ button:hover {
 }
 @media (min-width: 768px) {
   .hero__overlay .wrapper .sound-cloud iframe {
-    width: 54.5%;
+    width: 58%;
     height: 8.75rem;
   }
 }
@@ -399,7 +400,12 @@ button:hover {
 
 .show-info {
   padding: 0;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
+}
+@media (min-width: 768px) {
+  .show-info {
+    margin: 3rem 0 2rem 0;
+  }
 }
 @media (min-width: 1280px) {
   .show-info {
@@ -443,8 +449,8 @@ button:hover {
 @media (min-width: 768px) {
   .show-info .show__block {
     display: flex;
-    margin: 0 1rem 0 2rem;
-    padding: 1rem 1rem;
+    margin: 0 1rem 0 1rem;
+    padding: 1rem 1rem 1rem 1.25rem;
   }
 }
 .show-info .show__block:hover {
@@ -469,7 +475,7 @@ button:hover {
 }
 @media (min-width: 768px) {
   .show-info .show__block p {
-    width: 25%;
+    width: 26%;
     margin: 0;
     font-size: 0.875rem;
     align-content: center;
@@ -483,6 +489,11 @@ button:hover {
 .show-info .show__block p.show__date {
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  .show-info .show__block p.show__date {
+    width: 25.5%;
+  }
+}
 @media (min-width: 1280px) {
   .show-info .show__block p.show__date {
     width: 33.5%;
@@ -490,13 +501,8 @@ button:hover {
 }
 @media (min-width: 768px) {
   .show-info .show__block button {
-    width: 10rem;
+    width: 9.5rem;
     padding: 0 1rem;
-  }
-}
-@media (min-width: 1280px) {
-  .show-info .show__block button {
-    width: 9rem;
   }
 }
 
@@ -509,14 +515,13 @@ button:hover {
 @media (min-width: 768px) {
   .titlebar {
     visibility: visible;
-    margin: 0 0 0 2.75rem;
+    margin: 0 0 0 2rem;
     height: auto;
   }
 }
 @media (min-width: 1280px) {
   .titlebar {
     margin: 0 7.5rem 1rem 22.75rem;
-    padding: 0 1rem;
   }
 }
 .titlebar p {
@@ -525,6 +530,11 @@ button:hover {
   width: 24.25%;
   font-size: 0.75rem;
 }
+@media (min-width: 768px) {
+  .titlebar p {
+    width: 25%;
+  }
+}
 @media (min-width: 1280px) {
   .titlebar p {
     width: 22%;
@@ -532,6 +542,6 @@ button:hover {
 }
 @media (min-width: 1280px) {
   .titlebar p.show__date {
-    width: 33%;
+    width: 32.5%;
   }
 }/*# sourceMappingURL=shows.css.map */

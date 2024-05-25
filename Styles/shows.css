@@ -401,6 +401,12 @@ button:hover {
   padding: 0;
   margin: 2rem 0;
 }
+@media (min-width: 1280px) {
+  .show-info {
+    position: relative;
+    margin-top: 4rem;
+  }
+}
 .show-info h2 {
   margin: 0 0 0 1rem;
 }
@@ -412,8 +418,11 @@ button:hover {
 }
 @media (min-width: 1280px) {
   .show-info h2 {
-    display: inline;
-    margin-left: 7.75rem;
+    position: absolute;
+    margin: 0;
+    left: 8rem;
+    top: -1rem;
+    font-size: 2.25rem;
   }
 }
 .show-info .show .selected {
@@ -488,7 +497,6 @@ button:hover {
 @media (min-width: 1280px) {
   .show-info .show__block button {
     width: 9rem;
-    justify-self: flex-end;
   }
 }
 
@@ -507,9 +515,8 @@ button:hover {
 }
 @media (min-width: 1280px) {
   .titlebar {
-    margin: 0 0 1rem 8.875rem;
-    display: inline-flex;
-    gap: 13rem;
+    margin: 0 7.5rem 1rem 22.75rem;
+    padding: 0 1rem;
   }
 }
 .titlebar p {
@@ -517,4 +524,14 @@ button:hover {
   color: #afafaf;
   width: 24.25%;
   font-size: 0.75rem;
+}
+@media (min-width: 1280px) {
+  .titlebar p {
+    width: 22%;
+  }
+}
+@media (min-width: 1280px) {
+  .titlebar p.show__date {
+    width: 33%;
+  }
 }/*# sourceMappingURL=shows.css.map */

@@ -21,3 +21,12 @@
 	justify-content: center;
 	align-items: center;
 }
+
+@mixin user-image {
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: 5%;
+	margin-top: 1rem;
+}

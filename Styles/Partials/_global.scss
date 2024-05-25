@@ -5,7 +5,8 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "AvenirNext";
+	font-family: "AvenirNext", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: $Bandsite-black;
 }
 
 h1 {
@@ -122,6 +123,7 @@ header {
 
 			.active-page {
 				border-bottom: 3px solid $primarywhite;
+				font-weight: 600;
 			}
 
 			.inactive-page {
@@ -129,6 +131,14 @@ header {
 
 				a {
 					color: $secondarygrey;
+
+					&:hover {
+						color: $primarywhite;
+					}
+				}
+
+				&:hover {
+					border-bottom: 3px solid $primarywhite;
 				}
 			}
 		}
@@ -228,7 +238,7 @@ footer {
 
 		@include desktop {
 			bottom: 18.65rem;
-			right: 8rem;
+			right: 10.5rem;
 		}
 	}
 
@@ -244,4 +254,36 @@ footer {
 			font-size: 0.875rem;
 		}
 	}
+}
+
+// BUTTON //
+
+button {
+	color: $primarywhite;
+	background-color: $Bandsite-black;
+	text-align: center;
+	width: 100%;
+	font-family: "AvenirNext";
+	letter-spacing: 0.05rem;
+	font-size: 0.875rem;
+	height: 2.5rem;
+	padding: 0 2rem;
+	border-radius: 0.25rem;
+
+	@include tablet {
+		width: 30%;
+		justify-self: flex-end;
+	}
+
+	@include tablet {
+		width: 35%;
+	}
+
+	&:hover {
+		background-color: $darkBlack;
+	}
+}
+
+.error {
+	border: 1px solid red !important;
 }

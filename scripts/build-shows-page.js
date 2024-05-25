@@ -16,6 +16,11 @@ const shows = [
 	},
 	{
 		date: "Sat Nov 16 2024",
+		venue: "Hyatt Agency",
+		city: "San Francisco, CA",
+	},
+	{
+		date: "Fri Nov 29 2024",
 		venue: "Moscow Center",
 		city: "San Francisco, CA",
 	},
@@ -62,6 +67,7 @@ function postShow(show) {
 	showBlock.appendChild(showCity);
 
 	const button = document.createElement("button");
+	button.classList.add("show__button");
 	button.textContent = "BUY TICKETS";
 	showBlock.appendChild(button);
 }

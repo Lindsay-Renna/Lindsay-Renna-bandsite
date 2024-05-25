@@ -144,7 +144,7 @@ header .header-nav__list li a {
 }
 header .header-nav__list .active-page {
   border-bottom: 3px solid #ffffff;
-  font-weight: 700;
+  font-weight: 600;
 }
 header .header-nav__list .inactive-page {
   border-bottom: 3px solid transparent;
@@ -248,7 +248,7 @@ footer .bandsite-link img {
 @media (min-width: 1280px) {
   footer .bandsite-link {
     bottom: 18.65rem;
-    right: 8rem;
+    right: 10.5rem;
   }
 }
 footer .copyright {

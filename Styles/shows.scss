@@ -47,8 +47,8 @@
 		.wrapper {
 			@include desktop {
 				display: flex;
-				gap: 3rem;
-				margin-top: 1rem;
+				gap: 3.5rem;
+				margin-top: 2rem;
 			}
 
 			h1 {
@@ -145,7 +145,7 @@
 		}
 
 		@include desktop {
-			margin: 0 7.5rem 0 20.75rem;
+			margin: 0 7.5rem 0 22rem;
 		}
 
 		&__block {
@@ -156,6 +156,10 @@
 				display: flex;
 				margin: 0 1rem 0 1rem;
 				padding: 1rem 1rem 1rem 1.25rem;
+			}
+
+			@include desktop {
+				padding-right: 0;
 			}
 
 			&:hover {
@@ -187,7 +191,7 @@
 				}
 
 				@include desktop {
-					width: 22.5%;
+					width: 24%;
 				}
 			}
 
@@ -199,7 +203,7 @@
 				}
 
 				@include desktop {
-					width: 33.5%;
+					width: 36%;
 				}
 			}
 
@@ -226,7 +230,7 @@
 	}
 
 	@include desktop {
-		margin: 0 7.5rem 1rem 22.75rem;
+		margin: 0 7.5rem 1rem 24.25rem;
 	}
 
 	p {
@@ -240,13 +244,13 @@
 		}
 
 		@include desktop {
-			width: 22%;
+			width: 23%;
 		}
 	}
 
 	p.show__date {
 		@include desktop {
-			width: 32.5%;
+			width: 34%;
 		}
 	}
 }

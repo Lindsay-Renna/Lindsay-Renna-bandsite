@@ -341,8 +341,8 @@ button:hover {
 @media (min-width: 1280px) {
   .hero__overlay .wrapper {
     display: flex;
-    gap: 3rem;
-    margin-top: 1rem;
+    gap: 3.5rem;
+    margin-top: 2rem;
   }
 }
 .hero__overlay .wrapper h1 {
@@ -439,7 +439,7 @@ button:hover {
 }
 @media (min-width: 1280px) {
   .show-info .show {
-    margin: 0 7.5rem 0 20.75rem;
+    margin: 0 7.5rem 0 22rem;
   }
 }
 .show-info .show__block {
@@ -451,6 +451,11 @@ button:hover {
     display: flex;
     margin: 0 1rem 0 1rem;
     padding: 1rem 1rem 1rem 1.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .show-info .show__block {
+    padding-right: 0;
   }
 }
 .show-info .show__block:hover {
@@ -483,7 +488,7 @@ button:hover {
 }
 @media (min-width: 1280px) {
   .show-info .show__block p {
-    width: 22.5%;
+    width: 24%;
   }
 }
 .show-info .show__block p.show__date {
@@ -496,7 +501,7 @@ button:hover {
 }
 @media (min-width: 1280px) {
   .show-info .show__block p.show__date {
-    width: 33.5%;
+    width: 36%;
   }
 }
 @media (min-width: 768px) {
@@ -521,7 +526,7 @@ button:hover {
 }
 @media (min-width: 1280px) {
   .titlebar {
-    margin: 0 7.5rem 1rem 22.75rem;
+    margin: 0 7.5rem 1rem 24.25rem;
   }
 }
 .titlebar p {
@@ -537,11 +542,11 @@ button:hover {
 }
 @media (min-width: 1280px) {
   .titlebar p {
-    width: 22%;
+    width: 23%;
   }
 }
 @media (min-width: 1280px) {
   .titlebar p.show__date {
-    width: 32.5%;
+    width: 34%;
   }
 }/*# sourceMappingURL=shows.css.map */

@@ -1,4 +1,4 @@
-const comments = [
+const staticComments = [
 	{
 		name: "Isaac Tadesse",
 		comment:
@@ -85,7 +85,7 @@ const postComment = (comment) => {
 	imageContainer.classList.add("user-image-container");
 	commentBlock.appendChild(imageContainer);
 
-	if (comment.image === null) {
+	if (comment.image === undefined) {
 		const imageElement = document.createElement("div");
 		imageElement.classList.add("null-img");
 		imageContainer.appendChild(imageElement);
@@ -127,10 +127,10 @@ function formatDate(date) {
 	return new Intl.DateTimeFormat("en-US", options).format(date);
 }
 
-function refresh() {
+function refresh(comments) {
 	// do a loop over the array to create the comments
 	commentList.innerHTML = "";
 	comments.forEach(postComment);
 }
 
-refresh();
+bandSiteAPI.getComments();

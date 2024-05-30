@@ -1,27 +1,3 @@
-const staticComments = [
-	{
-		name: "Isaac Tadesse",
-		comment:
-			"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-		date: new Date(2023, 9, 20),
-		image: null,
-	},
-	{
-		name: "Christina Cabrera",
-		comment:
-			"I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-		date: new Date(2023, 9, 28),
-		image: null,
-	},
-	{
-		name: "Victor Pinto",
-		comment:
-			"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-		date: new Date(2023, 10, 2),
-		image: null,
-	},
-];
-
 const newCommentForm = document.querySelector(".new-comment-form");
 const commentList = document.querySelector(".posted-comments");
 

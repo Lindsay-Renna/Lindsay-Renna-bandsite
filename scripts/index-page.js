@@ -45,13 +45,10 @@ newCommentForm.addEventListener("submit", (event) => {
 		let newComment = {
 			name: userName,
 			comment: commentText,
-			date: new Date(),
-			image: "Mohan-muruge.jpg",
 		};
 
-		comments.push(newComment);
 		newCommentForm.reset();
-		refresh();
+		bandSiteAPI.postComment(newComment);
 	}
 
 	// Validation functions

@@ -7,7 +7,10 @@ class BandSiteApi {
 	async getComments() {
 		try {
 			const response = await axios.get(`${this.apiUrl}comments${this.apiKey}`);
-			const comments = response.data.reverse();
+			const commentUnsorted = response.data;
+			const comments = commentUnsorted.sort(
+				(a, b) => a.timestamp - b.timestamp
+			);
 			console.log(response.data);
 
 			refresh(comments);
@@ -17,7 +20,9 @@ class BandSiteApi {
 	}
 
 	async postComment(comment) {
-		await axios.post(`${this.apiUrl}comments${this.apiKey}`);
+		await axios.post(`${this.apiUrl}comments${this.apiKey}`, comment);
+
+		this.getComments();
 	}
 
 	async getShows() {

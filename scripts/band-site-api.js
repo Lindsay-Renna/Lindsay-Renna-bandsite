@@ -7,7 +7,7 @@ class BandSiteApi {
 	async getComments() {
 		try {
 			const response = await axios.get(`${this.apiUrl}comments${this.apiKey}`);
-			const comments = response.data;
+			const comments = response.data.reverse();
 			console.log(response.data);
 
 			refresh(comments);

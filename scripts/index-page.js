@@ -110,7 +110,7 @@ const postComment = (comment) => {
 	// time-stamp data
 	const commentTime = document.createElement("p");
 	commentTime.classList.add("time-stamp");
-	commentTime.textContent = formatDate(comment.date);
+	commentTime.textContent = formatDate(comment.timestamp);
 	commentContainer.appendChild(commentTime);
 
 	// user comment data

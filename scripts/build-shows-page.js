@@ -87,3 +87,5 @@ function handleSelect(event) {
 selectableDivs.forEach((div) => {
 	div.addEventListener("click", handleSelect);
 });
+
+console.log(x);

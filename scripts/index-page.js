@@ -116,6 +116,37 @@ const postComment = (comment) => {
 	commentText.textContent = comment.comment;
 	commentContainer.appendChild(commentText);
 
+	// Like IMG/counter
+	const likesBox = document.createElement("div");
+	likesBox.classList.add("like-box");
+	commentContainer.appendChild(likesBox);
+
+	const likeButton = document.createElement("img");
+	likeButton.classList.add("like-button");
+	likeButton.src = "./assets/Icons/SVG/icon-like.svg";
+	likesBox.appendChild(likeButton);
+
+	likeButton.addEventListener("click", (e) => {
+		bandSiteAPI.addLike(comment.id);
+		likeButton.classList.add("grey-out");
+	});
+
+	const likeCount = document.createElement("p");
+	likeCount.classList.add("like-count");
+	likeCount.innerText = comment.likes;
+	likesBox.appendChild(likeCount);
+
+	// Delete icon
+	const deleteButton = document.createElement("img");
+	deleteButton.classList.add("delete-button");
+	deleteButton.src = "./assets/Icons/SVG/icon-delete.svg";
+	commentContainer.appendChild(deleteButton);
+
+	deleteButton.addEventListener("click", (e) => {
+		bandSiteAPI.deleteComment(comment.id);
+		deleteButton.classList.add("grey-out");
+	});
+
 	commentList.insertBefore(commentBlock, commentList.firstChild);
 };
 

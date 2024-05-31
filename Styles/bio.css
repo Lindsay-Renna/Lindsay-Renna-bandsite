@@ -733,4 +733,24 @@ button:hover {
 .comments .posted-comments .comment-block .comments__wrapper .user-comment {
   width: 100%;
   margin-top: 0.25rem;
+}
+.comments .posted-comments .comment-block .comments__wrapper .like-box {
+  display: flex;
+  gap: 0.5rem;
+}
+.comments .posted-comments .comment-block .comments__wrapper .like-box img:hover {
+  cursor: pointer;
+}
+.comments .posted-comments .comment-block .comments__wrapper .like-box img:active {
+  opacity: 50%;
+}
+.comments .posted-comments .comment-block .comments__wrapper .like-box p {
+  margin-bottom: 0.5rem;
+}
+.comments .posted-comments .comment-block .comments__wrapper .delete-button:hover {
+  cursor: pointer;
+}
+
+.grey-out {
+  opacity: 50%;
 }/*# sourceMappingURL=bio.css.map */

@@ -11,7 +11,6 @@ class BandSiteApi {
 			const comments = commentUnsorted.sort(
 				(a, b) => a.timestamp - b.timestamp
 			);
-			console.log(response.data);
 
 			refresh(comments);
 		} catch (error) {
@@ -33,6 +32,16 @@ class BandSiteApi {
 		} catch (error) {
 			console.log(error);
 		}
+	}
+
+	async deleteComment(commentID) {
+		await axios.delete(`${this.apiUrl}comments/${commentID}${this.apiKey}`);
+		this.getComments();
+	}
+
+	async addLike(commentID) {
+		await axios.put(`${this.apiUrl}comments/${commentID}/like${this.apiKey}`);
+		this.getComments();
 	}
 }
 

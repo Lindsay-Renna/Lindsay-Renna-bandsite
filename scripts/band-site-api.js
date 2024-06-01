@@ -19,9 +19,13 @@ class BandSiteApi {
 	}
 
 	async postComment(comment) {
-		await axios.post(`${this.apiUrl}comments${this.apiKey}`, comment);
+		try {
+			await axios.post(`${this.apiUrl}comments${this.apiKey}`, comment);
 
-		this.getComments();
+			this.getComments();
+		} catch (error) {
+			console.log(error);
+		}
 	}
 
 	async getShows() {
